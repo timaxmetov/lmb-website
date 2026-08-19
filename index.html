@@ -46,13 +46,13 @@
   }
   .logo{display:flex;align-items:center}
   .logo img{height:56px;width:auto;display:block}
-  nav{display:flex;gap:20px;font-size:15px;font-weight:600}
-  nav a{white-space:nowrap}
+  header nav{display:flex;gap:20px;font-size:15px;font-weight:600}
+  header nav a{white-space:nowrap}
   nav a:hover{color:var(--blue)}
   .header-right{display:flex;align-items:center;gap:14px}
   .header-right .btn{white-space:nowrap}
   /* казахские строки длиннее — компактная шапка */
-  html[lang="kk"] nav{gap:14px;font-size:14px}
+  html[lang="kk"] header nav{gap:14px;font-size:14px}
   html[lang="kk"] .phone{font-size:14px}
   html[lang="kk"] header .btn{padding:13px 18px;font-size:14px}
   .phone{font-weight:700;color:var(--blue);font-size:15px;white-space:nowrap}
@@ -362,12 +362,12 @@
     .footer-top{grid-template-columns:1fr 1fr}
   }
   @media (max-width:1120px){
-    nav{
+    header nav{
       display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;
       background:var(--white);border-radius:16px;padding:18px 24px;
       flex-direction:column;gap:14px;box-shadow:0 12px 32px rgba(17,18,20,.12);
     }
-    nav a{white-space:normal}
+    header nav a{white-space:normal}
     header{position:relative}
     header nav.open{display:flex}
     .burger{display:block}
