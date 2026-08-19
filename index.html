@@ -105,8 +105,9 @@
   .hero p{color:var(--muted);font-size:16px;max-width:480px;margin:20px 0 32px}
   .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
   .hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .hero-imgs img{border-radius:var(--radius);width:100%;height:170px;object-fit:cover;transform:translateZ(0);backface-visibility:hidden}
-  .hero-imgs img:last-child{grid-column:1/-1;height:190px}
+  .hero-img-frame{border-radius:var(--radius);overflow:hidden;height:170px}
+  .hero-img-frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero-img-frame.hero-img-last{grid-column:1/-1;height:190px}
 
   /* ---------- about / stats ---------- */
   .about-lead{max-width:720px;margin:0 auto 44px;text-align:center;color:var(--muted);font-size:16px}
@@ -117,7 +118,8 @@
 
   .director{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:start}
   .director-figure{margin:0}
-  .director-photo{border-radius:var(--radius);width:100%;object-fit:cover;transform:translateZ(0);backface-visibility:hidden}
+  .director-photo-frame{border-radius:var(--radius);overflow:hidden}
+  .director-photo{width:100%;display:block;object-fit:cover}
   .director-caption{margin-top:14px;text-align:center}
   .director-caption b{display:block;font-size:17px;font-weight:800}
   .director-caption span{color:var(--muted);font-size:14px}
@@ -217,7 +219,8 @@
   }
   .form .agree{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.85)}
   .form .agree input{width:17px;height:17px;accent-color:#fff}
-  .cta-img{border-radius:var(--radius);width:100%;height:100%;min-height:320px;object-fit:cover;transform:translateZ(0);backface-visibility:hidden}
+  .cta-img-frame{width:100%;height:100%;border-radius:var(--radius);overflow:hidden;min-height:320px}
+  .cta-img{width:100%;height:100%;object-fit:cover;display:block}
 
   /* ---------- FAQ ---------- */
   .faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
@@ -351,10 +354,9 @@
   @media (max-width:1000px){
     .hero{grid-template-columns:1fr}
     .director{grid-template-columns:1fr}
-    .director-photo{max-width:380px}
     .prod-cards{grid-template-columns:repeat(2,1fr)}
     .cta-section{grid-template-columns:1fr}
-    .cta-img{min-height:240px}
+    .cta-img-frame{min-height:240px}
     .contacts-grid{grid-template-columns:1fr}
     .lmb-grid{grid-template-columns:1fr}
     .footer-top{grid-template-columns:1fr 1fr}
@@ -378,8 +380,8 @@
     header{padding:12px 16px}
     header .btn{display:none}
     .logo img{height:44px}
-    .hero-imgs img{height:130px}
-    .hero-imgs img:last-child{height:150px}
+    .hero-img-frame{height:130px}
+    .hero-img-frame.hero-img-last{height:150px}
     .hero-btns .btn{flex:1;text-align:center}
     .partner-card{min-height:110px;padding:20px 16px}
     .partner-card.dark{padding:0}
@@ -449,9 +451,9 @@
         </div>
       </div>
       <div class="hero-imgs">
-        <img src="assets/zavod-1.jpg" alt="Бетонный завод ЛМБ в Алматы">
-        <img src="assets/zavod-2.jpg" alt="Производственная площадка ЛМБ">
-        <img src="assets/stroika.jpg" alt="Строительство с использованием бетона ЛМБ">
+        <div class="hero-img-frame"><img src="assets/zavod-1.jpg" alt="Бетонный завод ЛМБ в Алматы"></div>
+        <div class="hero-img-frame"><img src="assets/zavod-2.jpg" alt="Производственная площадка ЛМБ"></div>
+        <div class="hero-img-frame hero-img-last"><img src="assets/stroika.jpg" alt="Строительство с использованием бетона ЛМБ"></div>
       </div>
     </div>
   </div>
@@ -471,7 +473,7 @@
     <h2 class="section-title" style="text-align:left;font-size:clamp(24px,3vw,34px)"><span class="accent">Слово</span> директора компании</h2>
     <div class="director" style="margin-top:26px">
       <figure class="director-figure">
-        <img class="director-photo" src="assets/director.jpg" alt="Ахметов Д.А. — директор компании ЛМБ">
+        <div class="director-photo-frame"><img class="director-photo" src="assets/director.jpg" alt="Ахметов Д.А. — директор компании ЛМБ"></div>
         <figcaption class="director-caption">
           <b>Ахметов Д.А.</b>
           <span>профессор, доктор строительных наук</span>
@@ -693,7 +695,7 @@
         <button class="btn btn-white" type="submit" style="justify-self:start">Отправить</button>
       </form>
     </div>
-    <img class="cta-img" src="assets/stroika.jpg" alt="Строители на объекте">
+    <div class="cta-img-frame"><img class="cta-img" src="assets/stroika.jpg" alt="Строители на объекте"></div>
   </div>
 </section>
 
