@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЛМБ — Товарный и литой модифицированный бетон с доставкой в г. Алматы</title>
+<meta name="description" content="Товарный бетон от М100 до М500 и литой модифицированный бетон (ЛМБ) с доставкой от завода-производителя в г. Алматы от 20 900 тг.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#0E34BD;
+    --blue-dark:#0A2795;
+    --gray:#F6F6F6;
+    --white:#FFFFFF;
+    --dark:#111214;
+    --text:#1a1a1a;
+    --muted:#6b6f76;
+    --radius:20px;
+    --radius-lg:28px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',-apple-system,'Segoe UI',Arial,sans-serif;
+    color:var(--text);
+    background:#ECEDEF;
+    line-height:1.55;
+  }
+  /* Manrope не содержит казахских букв (қ, ғ, ң, ә, ұ) — для казахской версии используем Inter */
+  html[lang="kk"] body{font-family:'Inter','Manrope',-apple-system,'Segoe UI',Arial,sans-serif}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+  /* ---------- header ---------- */
+  .header-outer{position:sticky;top:12px;z-index:100;padding:0 12px}
+  header{
+    max-width:1200px;margin:0 auto;
+    background:var(--white);
+    border-radius:var(--radius);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 28px;
+    box-shadow:0 6px 24px rgba(17,18,20,.06);
+  }
+  .logo{display:flex;align-items:center}
+  .logo img{height:56px;width:auto;display:block}
+  nav{display:flex;gap:20px;font-size:15px;font-weight:600}
+  nav a{white-space:nowrap}
+  nav a:hover{color:var(--blue)}
+  .header-right{display:flex;align-items:center;gap:14px}
+  .header-right .btn{white-space:nowrap}
+  /* казахские строки длиннее — компактная шапка */
+  html[lang="kk"] nav{gap:14px;font-size:14px}
+  html[lang="kk"] .phone{font-size:14px}
+  html[lang="kk"] header .btn{padding:13px 18px;font-size:14px}
+  .phone{font-weight:700;color:var(--blue);font-size:15px;white-space:nowrap}
+  .wa{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#25D366}
+  .lang-select{
+    border:none;background:var(--gray);border-radius:10px;
+    padding:9px 12px;font-family:inherit;font-weight:700;font-size:14px;
+    cursor:pointer;color:var(--text);appearance:auto;
+  }
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{display:block;width:22px;height:2.5px;background:var(--text);margin:4.5px 0;border-radius:2px}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-block;border:none;cursor:pointer;
+    font-family:inherit;font-size:15.5px;font-weight:700;
+    padding:15px 32px;border-radius:12px;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-blue{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(14,52,189,.25)}
+  .btn-blue:hover{background:var(--blue-dark)}
+  .btn-white{background:var(--white);color:var(--blue)}
+  .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.8)}
+  .btn-outline:hover{background:#fff;color:var(--blue)}
+
+  /* ---------- sections ---------- */
+  section{margin:16px 12px}
+  .card-section{
+    max-width:1200px;margin-left:auto;margin-right:auto;
+    background:var(--white);border-radius:var(--radius-lg);
+    padding:72px 56px;
+  }
+  .section-title{
+    font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.15;
+    text-align:center;margin-bottom:14px;
+  }
+  .section-title .accent{color:var(--blue)}
+  .section-sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 44px;font-size:16px}
+
+  /* ---------- hero ---------- */
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(30px,4.4vw,50px);font-weight:800;line-height:1.12;margin-bottom:8px}
+  .hero h1 .accent{color:var(--blue)}
+  .hero .badge{
+    display:inline-block;background:var(--gray);color:var(--blue);
+    font-weight:700;font-size:14px;border-radius:999px;
+    padding:8px 18px;margin-bottom:22px;
+  }
+  .hero p{color:var(--muted);font-size:16px;max-width:480px;margin:20px 0 32px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .hero-imgs img{border-radius:var(--radius);width:100%;height:170px;object-fit:cover}
+  .hero-imgs img:last-child{grid-column:1/-1;height:190px}
+
+  /* ---------- about / stats ---------- */
+  .about-lead{max-width:720px;margin:0 auto 44px;text-align:center;color:var(--muted);font-size:16px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:64px}
+  .stat{background:var(--gray);border-radius:var(--radius);padding:30px 24px;text-align:center}
+  .stat b{display:block;font-size:34px;font-weight:800;color:var(--blue);margin-bottom:4px}
+  .stat span{color:var(--muted);font-size:14.5px}
+
+  .director{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:start}
+  .director-figure{margin:0}
+  .director-photo{border-radius:var(--radius);width:100%;object-fit:cover}
+  .director-caption{margin-top:14px;text-align:center}
+  .director-caption b{display:block;font-size:17px;font-weight:800}
+  .director-caption span{color:var(--muted);font-size:14px}
+  .director-card{background:var(--gray);border-radius:var(--radius);padding:34px 36px}
+  .director-card h3{font-size:26px;font-weight:800;line-height:1.2;margin-bottom:14px}
+  .director-card .quote{color:#3c4046;font-size:14.5px}
+  .director-card .quote p{margin-bottom:12px}
+  .quote-more{display:none}
+  .quote-toggle{
+    background:none;border:none;cursor:pointer;font-family:inherit;
+    color:var(--blue);font-weight:700;font-size:14.5px;padding:0;
+  }
+  .quote-toggle:hover{text-decoration:underline}
+
+  /* ---------- products ---------- */
+  .prod-group{margin-bottom:44px}
+  .prod-group h3{font-size:22px;font-weight:800;margin-bottom:20px}
+  .prod-group h3 .accent{color:var(--blue)}
+  .prod-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .prod-card{
+    background:var(--gray);border-radius:var(--radius);padding:28px 26px;
+    display:flex;flex-direction:column;gap:18px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .prod-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(17,18,20,.08)}
+  .prod-card .name{font-weight:700;font-size:15.5px;letter-spacing:.04em;text-transform:uppercase}
+  .prod-card .price{margin-top:auto}
+  .prod-card .price b{font-size:26px;color:var(--blue);font-weight:800}
+  .prod-card .price span{display:block;font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  .delivery{background:var(--gray);border-radius:var(--radius);padding:30px 34px}
+  .delivery ul{list-style:none;display:grid;gap:10px}
+  .delivery li{padding-left:22px;position:relative;font-size:15px;color:#3c4046}
+  .delivery li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--blue)}
+  .delivery .order-now{margin-top:18px;font-weight:700;font-size:15.5px}
+  .delivery .order-now a{color:var(--blue)}
+
+  /* ---------- LMB info / advantages ---------- */
+  .lmb-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin-bottom:52px}
+  .lmb-grid h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1.15;text-align:left;margin-bottom:18px}
+  .lmb-grid h2 .accent{color:var(--blue)}
+  .lmb-grid p{color:var(--muted);font-size:15.5px;margin-bottom:16px}
+  .lmb-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  .adv-list{display:grid;gap:12px}
+  .adv-item{
+    background:var(--gray);border-radius:14px;padding:20px 26px;
+    font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:14px;
+  }
+  .adv-item svg{flex:none}
+
+  /* ---------- tech table ---------- */
+  .tech-section{
+    max-width:1200px;margin-left:auto;margin-right:auto;
+    background:var(--blue);border-radius:var(--radius-lg);
+    padding:64px 56px;color:#fff;
+  }
+  .tech-section .section-title{color:#fff}
+  .tech-section .section-sub{color:rgba(255,255,255,.75)}
+  .tech-table-wrap{overflow-x:auto}
+  .tech-table{width:100%;border-collapse:collapse;font-size:15px;min-width:640px}
+  .tech-table th,.tech-table td{padding:18px 16px;text-align:left;border-bottom:1px solid rgba(255,255,255,.25);vertical-align:top}
+  .tech-table th{font-size:17px;font-weight:800}
+  .tech-table td:first-child{color:rgba(255,255,255,.85);max-width:280px}
+  .tech-table td b{font-size:16.5px}
+  .tech-table small{display:block;color:rgba(255,255,255,.65);margin-top:4px;font-size:12.5px}
+
+  /* ---------- world ---------- */
+  .world-lead{max-width:760px;margin:0 auto 40px;text-align:center;color:var(--muted);font-size:15.5px}
+  .world-lead p{margin-bottom:12px}
+  .world-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .world-card{position:relative;border-radius:var(--radius);overflow:hidden}
+  .world-card img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+  .world-card:hover img{transform:scale(1.03)}
+  .world-card.tall{grid-row:span 2}
+  .world-card.tall img{height:100%}
+  .world-card:not(.tall) img{height:230px}
+  .world-card .caption{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:44px 24px 18px;
+    color:#fff;font-weight:800;font-size:19px;line-height:1.25;
+    background:linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0));
+  }
+
+  /* ---------- CTA form ---------- */
+  .cta-section{
+    max-width:1200px;margin-left:auto;margin-right:auto;
+    background:var(--blue);border-radius:var(--radius-lg);
+    padding:64px 56px;color:#fff;
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+  }
+  .cta-section h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1.15;margin-bottom:12px}
+  .cta-section .sub{color:rgba(255,255,255,.8);margin-bottom:30px;font-size:15.5px}
+  .form{display:grid;gap:14px}
+  .form input[type=text],.form input[type=tel]{
+    font-family:inherit;font-size:15px;
+    padding:15px 18px;border-radius:12px;border:none;outline:none;
+    background:#fff;color:var(--text);width:100%;
+  }
+  .form .agree{display:flex;align-items:center;gap:10px;font-size:13.5px;color:rgba(255,255,255,.85)}
+  .form .agree input{width:17px;height:17px;accent-color:#fff}
+  .cta-img{border-radius:var(--radius);width:100%;height:100%;min-height:320px;object-fit:cover}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+  .faq-item{background:var(--gray);border-radius:14px;overflow:hidden}
+  .faq-q{
+    width:100%;background:none;border:none;cursor:pointer;font-family:inherit;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:20px 26px;font-size:15.5px;font-weight:700;text-align:left;color:var(--text);
+  }
+  .faq-q .chev{
+    flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);
+    display:flex;align-items:center;justify-content:center;transition:transform .25s ease;
+  }
+  .faq-item.open .chev{transform:rotate(180deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .faq-a p{padding:0 26px 22px;color:var(--muted);font-size:14.5px}
+
+  /* ---------- partner CTA ---------- */
+  .partner{
+    max-width:1200px;margin-left:auto;margin-right:auto;
+    background:var(--blue);border-radius:var(--radius-lg);
+    padding:72px 40px;color:#fff;text-align:center;
+  }
+  .partner h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;line-height:1.2;margin-bottom:12px}
+  .partner p{color:rgba(255,255,255,.8);margin-bottom:30px}
+
+  /* ---------- contacts ---------- */
+  .contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .contact-list{display:grid;gap:22px;align-content:start}
+  .contact-item{display:flex;gap:16px;align-items:flex-start;font-size:16px;font-weight:600}
+  .contact-item .ico{
+    flex:none;width:44px;height:44px;border-radius:12px;background:var(--gray);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .contact-item a:hover{color:var(--blue)}
+  .socials{display:flex;gap:12px;margin-top:8px}
+  .socials a{
+    width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;
+    display:flex;align-items:center;justify-content:center;transition:background .15s;
+  }
+  .socials a:hover{background:var(--blue-dark)}
+  .map{position:relative;border-radius:var(--radius);overflow:hidden;min-height:380px;background:var(--gray)}
+  .map iframe{width:100%;height:100%;min-height:380px;border:none;display:block;position:relative;z-index:1}
+  .map-fallback{
+    position:absolute;inset:0;z-index:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    padding:24px;text-align:center;color:var(--muted);font-size:14.5px;
+  }
+  .map-fallback svg{opacity:.5}
+
+  /* ---------- footer ---------- */
+  footer{margin:16px 12px 12px}
+  .footer-card{
+    max-width:1200px;margin:0 auto;background:var(--dark);color:#fff;
+    border-radius:var(--radius-lg);padding:52px 56px 0;overflow:hidden;
+  }
+  .footer-top{display:grid;grid-template-columns:1.2fr 1fr 1.2fr;gap:32px;padding-bottom:40px}
+  .footer-logo{font-weight:800;letter-spacing:.14em;font-size:20px;margin-bottom:10px}
+  .footer-lmb-img{background:#fff;border-radius:12px;padding:6px 10px;display:inline-block;margin-bottom:14px}
+  .footer-lmb-img img{height:58px;display:block}
+  .fond-logo{height:66px;border-radius:10px;flex:none}
+  .footer-col nav{display:grid;gap:10px;font-size:15px;font-weight:500}
+  .footer-col nav a{color:rgba(255,255,255,.8)}
+  .footer-col nav a:hover{color:#fff}
+  .footer-col .contact-mini{display:grid;gap:10px;font-size:15px;color:rgba(255,255,255,.85)}
+  .footer-col .contact-mini a:hover{color:#fff}
+  .footer-note{
+    margin:0 -56px;background:var(--blue);
+    padding:20px 56px;font-size:13px;color:rgba(255,255,255,.9);
+    display:flex;gap:18px;align-items:center;flex-wrap:wrap;
+  }
+  .footer-note b{white-space:nowrap}
+
+  /* ---------- partners ---------- */
+  .partners-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:16px;margin-top:40px;
+  }
+  .partner-card{
+    background:#fff;border:1px solid #ececee;border-radius:var(--radius);
+    padding:26px 20px;min-height:140px;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .partner-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(17,18,20,.08)}
+  .partner-card img{max-width:100%;max-height:95px;object-fit:contain}
+  .partner-card.dark{background:#2b4a44;padding:0;overflow:hidden}
+  .partner-card.dark img{width:100%;height:100%;max-height:140px;object-fit:cover}
+
+  /* ---------- floating contact button ---------- */
+  .fab{
+    position:fixed;right:22px;bottom:22px;z-index:300;
+    display:flex;flex-direction:column;align-items:center;gap:14px;
+  }
+  .fab-item{
+    width:52px;height:52px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 24px rgba(17,18,20,.22);
+    opacity:0;transform:translateY(14px) scale(.7);pointer-events:none;
+    transition:opacity .22s ease, transform .22s ease;
+  }
+  .fab.open .fab-item{opacity:1;transform:none;pointer-events:auto}
+  .fab.open .fab-item:nth-child(1){transition-delay:.06s}
+  .fab-phone{background:#111214}
+  .fab-wa{background:#25D366}
+  .fab-main{
+    width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;
+    background:#22B85C;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 28px rgba(34,184,92,.45);
+    transition:background .22s ease, transform .22s ease, box-shadow .22s ease;
+  }
+  .fab-main:hover{transform:scale(1.06)}
+  .fab-main .ico-close{display:none}
+  .fab.open .fab-main{background:#fff;box-shadow:0 10px 28px rgba(17,18,20,.18)}
+  .fab.open .fab-main .ico-chat{display:none}
+  .fab.open .fab-main .ico-close{display:block}
+  .fab-main::before{
+    content:'';position:absolute;inset:0;border-radius:50%;
+    box-shadow:0 0 0 0 rgba(34,184,92,.45);
+    animation:fabPulse 2.4s ease-out infinite;
+  }
+  .fab.open .fab-main::before{animation:none}
+  .fab-main{position:relative}
+  @keyframes fabPulse{
+    0%{box-shadow:0 0 0 0 rgba(34,184,92,.45)}
+    70%{box-shadow:0 0 0 16px rgba(34,184,92,0)}
+    100%{box-shadow:0 0 0 0 rgba(34,184,92,0)}
+  }
+
+  /* ---------- adaptive ---------- */
+  @media (max-width:1000px){
+    .hero{grid-template-columns:1fr}
+    .director{grid-template-columns:1fr}
+    .director-photo{max-width:380px}
+    .prod-cards{grid-template-columns:repeat(2,1fr)}
+    .cta-section{grid-template-columns:1fr}
+    .cta-img{min-height:240px}
+    .contacts-grid{grid-template-columns:1fr}
+    .lmb-grid{grid-template-columns:1fr}
+    .footer-top{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:1120px){
+    nav{
+      display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;
+      background:var(--white);border-radius:16px;padding:18px 24px;
+      flex-direction:column;gap:14px;box-shadow:0 12px 32px rgba(17,18,20,.12);
+    }
+    nav a{white-space:normal}
+    header{position:relative}
+    header nav.open{display:flex}
+    .burger{display:block}
+  }
+  @media (max-width:1000px){
+    .director-figure{max-width:380px;margin:0 auto}
+  }
+  @media (max-width:760px){
+    .phone-desktop{display:none}
+    header{padding:12px 16px}
+    header .btn{display:none}
+    .logo img{height:44px}
+    .hero-imgs img{height:130px}
+    .hero-imgs img:last-child{height:150px}
+    .hero-btns .btn{flex:1;text-align:center}
+    .partner-card{min-height:110px;padding:20px 16px}
+    .partner-card.dark{padding:0}
+    .fond-logo{height:54px}
+    .footer-note{justify-content:center;text-align:center}
+    .fab{right:16px;bottom:16px}
+    .contact-item{font-size:15px}
+    .map{min-height:300px}
+    .map iframe{min-height:300px}
+    .card-section,.tech-section,.cta-section{padding:44px 24px}
+    .footer-card{padding:40px 24px 0}
+    .footer-note{margin:0 -24px;padding:18px 24px}
+    .stats{grid-template-columns:1fr}
+    .prod-cards{grid-template-columns:1fr}
+    .world-grid{grid-template-columns:1fr}
+    .world-card.tall{grid-row:auto}
+    .world-card.tall img{height:260px}
+    .footer-top{grid-template-columns:1fr}
+    .lmb-stats{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<div class="header-outer">
+  <header>
+    <a class="logo" href="#top">
+      <img src="assets/logo-lmb.jpg" alt="ЛМБ — Литой Модифицированный Бетон">
+    </a>
+    <nav id="nav">
+      <a href="#about">О компании</a>
+      <a href="#products">Продукция</a>
+      <a href="#lmb">ЛМБ</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-right">
+      <select id="langSel" class="lang-select" aria-label="Язык / Language">
+        <option value="ru">РУС</option>
+        <option value="en">ENG</option>
+        <option value="kk">ҚАЗ</option>
+        <option value="tr">TÜR</option>
+        <option value="zh">中文</option>
+      </select>
+      <a class="phone phone-desktop" href="tel:+77781240298">+7 778 124 02 98</a>
+      <a class="wa" href="https://wa.me/77781240298" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.2c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.7 1.1 1.5 1.8 1 .9 1.9 1.2 2.2 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2.1 1c.3.1.5.2.6.3.1.3.1.8-.2 1.3z"/></svg>
+      </a>
+      <a class="btn btn-blue" href="#order">Заказать звонок</a>
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+</div>
+
+<!-- ================= HERO ================= -->
+<section id="top">
+  <div class="card-section">
+    <div class="hero">
+      <div>
+        <span class="badge">от 20 900 тг за 1 м³ · Жетысуйский р-н, г. Алматы</span>
+        <h1><span class="accent">Товарный и ЛМБ бетон</span> с&nbsp;доставкой от завода-производителя в&nbsp;г.&nbsp;Алматы от&nbsp;20&nbsp;900&nbsp;тг</h1>
+        <p>Товарный бетон от М100 до М500. Литой модифицированный бетон не имеет аналогов в Казахстане. Проверка качества своей лабораторией. Завод находится в черте г. Алматы.</p>
+        <div class="hero-btns">
+          <a class="btn btn-blue" href="#order">Заказать бетон</a>
+          <a class="btn btn-white" style="background:var(--gray)" href="https://wa.me/77781240298" target="_blank" rel="noopener">Связаться с нами</a>
+        </div>
+      </div>
+      <div class="hero-imgs">
+        <img src="assets/zavod-1.jpg" alt="Бетонный завод ЛМБ в Алматы">
+        <img src="assets/zavod-2.jpg" alt="Производственная площадка ЛМБ">
+        <img src="assets/stroika.jpg" alt="Строительство с использованием бетона ЛМБ">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="card-section">
+    <h2 class="section-title">О <span class="accent">компании</span></h2>
+    <p class="about-lead">ЛМБ 2022 — высокотехнологичная компания, которая была создана 30 ноября 2022 г. Наша компания ориентирована на производство продукции с высокой добавленной стоимостью, которая отличается своей уникальностью и инновационностью. Качество продукции, быстрая доставка по г. Алматы.</p>
+    <div class="stats">
+      <div class="stat"><b>2022</b><span>год основания компании</span></div>
+      <div class="stat"><b>М100–М500</b><span>марки товарного бетона</span></div>
+      <div class="stat"><b>0 аналогов</b><span>ЛМБ не имеет аналогов в Казахстане</span></div>
+    </div>
+
+    <h2 class="section-title" style="text-align:left;font-size:clamp(24px,3vw,34px)"><span class="accent">Слово</span> директора компании</h2>
+    <div class="director" style="margin-top:26px">
+      <figure class="director-figure">
+        <img class="director-photo" src="assets/director.jpg" alt="Ахметов Д.А. — директор компании ЛМБ">
+        <figcaption class="director-caption">
+          <b>Ахметов Д.А.</b>
+          <span>профессор, доктор строительных наук</span>
+        </figcaption>
+      </figure>
+      <div class="director-card">
+        <h3>Ахметов Д.А. — директор компании ЛМБ</h3>
+        <div class="quote">
+          <p>«Республика Казахстан ставит перед собой грандиозные задачи, воплощение многих из которых возможно именно в строительной отрасли. Строительная отрасль в Республике Казахстан является одним из ведущих сегментов экономики страны. Но при реализации новых инфраструктурных объектов появляются и новые требования к строительным материалам, которые должны иметь повышенные прочностные и эксплуатационные характеристики. Это касается гидротехнических, транспортных сооружений, подвесных мостов, высотных зданий, частного жилого строительства и других объектов гражданского и промышленного строительства.</p>
+          <div class="quote-more">
+            <p>Надо отметить, что новые условия рынка диктуют необходимость снижения финансирования на строительные нужды, при этом основными условиями являются сокращение сроков строительства без потери качественных характеристик. Также одним из важных показателей при возведении зданий и сооружений является снижение уровня шума и вибраций, возникающих во время строительных работ, возможность бетонирования конструкций сложной пространственной геометрии, в том числе густоармированных, что особенно актуально в густонаселенных и сейсмоопасных регионах страны.</p>
+            <p>Данные задачи можно решить путем применения в строительстве литых модифицированных бетонов (ЛМБ) с самоуплотняющимися свойствами, которые находят все более широкое применение в мире, за счет положительного экономического эффекта, о чем свидетельствуют как зарубежный, так и отечественный опыт. Самоуплотняющийся бетон в настоящее время широко используется в промышленном и гражданском строительстве с целью сокращения сроков возведения крупномасштабных сооружений.</p>
+            <p>В начале 2000-х годов по всей Европе стали появляться первые предпосылки для допуска и распространения самоуплотняющегося и литого бетона.</p>
+            <p>Самоуплотняющийся бетон был впервые разработан в 1988 году для получения прочных бетонных конструкций сложной геометрической формы. С тех пор были проведены различные научные исследования, и этот вид бетона стал применяться в практических сооружениях в Японии, в основном крупными строительными компаниями. С целью превращения самоуплотняющегося бетона из специального в стандартный бетон учеными были проведены серьезные исследования по разработке рационального метода составления смеси и методов испытаний на самоуплотняемость.</p>
+            <p>В 2017 году на базе Научно-исследовательского института строительных материалов начались работы над проектом литых модифицированных бетонов, и команда исследователей работала над этим проектом сначала в лабораторных условиях, а далее уже апробировала и доказала работоспособность идеи и на производственной площадке. Основной задачей было проектирование состава бетонной смеси на местных сырьевых компонентах с использованием добавок на основе поликарбоксилатных эфиров местного казахстанского производства и тонкодисперсных наполнителей — отходов техногенных производств.</p>
+            <p>Сегодня мы с радостью представляем Вам — строительство инновационного завода по производству отечественного литого модифицированного бетона. Этот проект реализуется совместно с Фондом науки, который на конкурсной основе оценил перспективы внедрения ЛМБ в строительной сфере Казахстана и предоставил грант на его строительство. И теперь завод сможет обеспечить потребности отечественной строительной отрасли в инновационном литом модифицированном бетоне. Необходимо отметить, что проекты Фонда Науки способствуют росту научного потенциала страны и помогают воплотить научные изыскания в жизнь. Также стоит отметить, что литой модифицированный бетон — отечественный продукт, который попутно решает вопросы экологии путем применения отходов ферросплавных производств, снижения шумовой и вибрационной нагрузки, сокращение сроков строительства. Все это должно быть применено в строительной индустрии и выражает нашу заботу о процветании казахстанского общества».</p>
+          </div>
+          <button class="quote-toggle" id="quoteToggle">Читать полностью</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section id="products">
+  <div class="card-section">
+    <h2 class="section-title">Наша <span class="accent">продукция</span></h2>
+    <p class="section-sub">Вся продукция сертифицирована и соответствует ГОСТу. Цены указаны за 1 куб.м.</p>
+
+    <div class="prod-group">
+      <h3>Литой модифицированный бетон / <span class="accent">ЛМБ</span></h3>
+      <div class="prod-cards">
+        <div class="prod-card">
+          <div class="name">Литой модифицированный бетон (М-350)</div>
+          <div class="price"><b>36 500 тг.</b><span>цена за 1 куб.м</span></div>
+        </div>
+        <div class="prod-card">
+          <div class="name">Литой модифицированный бетон (М-400)</div>
+          <div class="price"><b>37 700 тг.</b><span>цена за 1 куб.м</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-group">
+      <h3>Товарный бетон <span class="accent">М100 – М500</span></h3>
+      <div class="prod-cards">
+        <div class="prod-card">
+          <div class="name">Товарный бетон М – 100 (В-7,5)</div>
+          <div class="price"><b>20 900 тг.</b><span>цена за 1 куб.м</span></div>
+        </div>
+        <div class="prod-card">
+          <div class="name">Товарный бетон М – 350 (В-25)</div>
+          <div class="price"><b>27 500 тг.</b><span>цена за 1 куб.м</span></div>
+        </div>
+        <div class="prod-card">
+          <div class="name">Товарный бетон М – 400 (В-30)</div>
+          <div class="price"><b>29 000 тг.</b><span>цена за 1 куб.м</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="delivery">
+      <ul>
+        <li>Завод в черте г. Алматы, быстрая доставка по городу и до 50 км рядом. От М100 до М500.</li>
+        <li>Доставка осуществляется автобетоносмесителями от 3 000 тг/м3, в зависимости от расстояния.</li>
+        <li>При доставке товарного бетона менее 10 м3, оплата производится за 10 м3.</li>
+        <li>Разновидности товарного бетона, литой модифицированный бетон, высокое качество, собственная лаборатория.</li>
+        <li>Марки, не указанные в прайс-листе, производятся по договоренности.</li>
+        <li>Вся продукция сертифицирована и соответствует ГОСТу.</li>
+        <li>Быстрая доставка в любую точку города за счет удобной локации завода.</li>
+      </ul>
+      <p class="order-now">Закажите бетон прямо сейчас: <a href="tel:+77781240298">+7 778 124 02 98</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LMB INFO ================= -->
+<section id="lmb">
+  <div class="card-section">
+    <div class="lmb-grid">
+      <div>
+        <h2>Что такое <span class="accent">литой модифицированный бетон</span></h2>
+        <p>Литой модифицированный бетон не имеет аналогов на территории Республики Казахстан, при этом обладает искомыми и необходимыми в современном строительстве свойствами и физико-техническими характеристиками. Необходимо отметить, что ЛМБ производится уже по Еврокодам EN 206-2017, уже принятым и действующим в Казахстане.</p>
+        <div class="lmb-stats">
+          <div class="stat"><b>в 3 раза</b><span>сокращаются сроки и затраты труда</span></div>
+          <div class="stat"><b>30 минут</b><span>время укладки одного куба ЛМБ</span></div>
+        </div>
+      </div>
+      <div>
+        <h2>Преимущества <span class="accent">ЛМБ</span></h2>
+        <div class="adv-list">
+          <div class="adv-item">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect width="26" height="26" rx="8" fill="#0E34BD"/><path d="M7 13.5l4 4 8-8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Отсутствие технологии виброуплотнения
+          </div>
+          <div class="adv-item">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect width="26" height="26" rx="8" fill="#0E34BD"/><path d="M7 13.5l4 4 8-8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Уменьшение сроков укладки бетона
+          </div>
+          <div class="adv-item">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect width="26" height="26" rx="8" fill="#0E34BD"/><path d="M7 13.5l4 4 8-8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Качественная поверхность (класс А1) без трещин и раковин
+          </div>
+          <div class="adv-item">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect width="26" height="26" rx="8" fill="#0E34BD"/><path d="M7 13.5l4 4 8-8" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Снижение себестоимости строительства
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TECH TABLE ================= -->
+<section id="tech">
+  <div class="tech-section">
+    <h2 class="section-title">Технические характеристики</h2>
+    <p class="section-sub">Сравнение ЛМБ со стандартным бетоном М350</p>
+    <div class="tech-table-wrap">
+      <table class="tech-table">
+        <thead>
+          <tr><th></th><th>ЛМБ</th><th>Стандартный бетон М350</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Минимальная прочность при сжатии в возрасте 28 суток</td>
+            <td><b>32 МПа</b></td>
+            <td><b>32 МПа</b></td>
+          </tr>
+          <tr>
+            <td>Достижимая прочность при сжатии в возрасте 28 суток</td>
+            <td><b>54 МПа</b></td>
+            <td><b>40 МПа</b></td>
+          </tr>
+          <tr>
+            <td>Прочность в возрасте 2 суток = (от 50% от марочной прочности)</td>
+            <td><b>от 16,00 МПа</b></td>
+            <td><b>9,6 МПа</b></td>
+          </tr>
+          <tr>
+            <td>Прочность в возрасте 7 суток = (110% от марочной прочности)</td>
+            <td><b>от 35,2 МПа</b></td>
+            <td><b>22,4 МПа</b></td>
+          </tr>
+          <tr>
+            <td>Удобоукладываемость — расплыв конуса</td>
+            <td><b>от 660 до 700 мм</b></td>
+            <td><b>220–250 мм</b><small>недостаточно для применения безвибрационных технологий строительных работ</small></td>
+          </tr>
+          <tr>
+            <td>Время истечения из V-образной воронки</td>
+            <td><b>9–12 секунд</b></td>
+            <td><small style="margin-top:0">Товарный бетон не имеет таких показателей как время истечения и проходимость через препятствия в конструкции.</small></td>
+          </tr>
+          <tr>
+            <td>L-box</td>
+            <td><b>≥0,9</b></td>
+            <td><small style="margin-top:0">Товарный бетон не имеет таких показателей как время истечения и проходимость через препятствия в конструкции.</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORLD EXPERIENCE ================= -->
+<section id="world">
+  <div class="card-section">
+    <h2 class="section-title">Мировой опыт строительства <span class="accent">с использованием ЛМБ</span></h2>
+    <div class="world-lead">
+      <p>Мировая практика показывает, что разработка литого модифицированного бетона является необходимостью для обеспечения возрастающих потребностей строительной индустрии.</p>
+      <p>Появление новых амбициозных проектов в сфере строительства (таких, как протяженные подвесные мосты в Японии и Китае, комплексы крупных гидротехнических и транспортных сооружений в Голландии и ряд других) повысило требования к особо высокопрочным бетонам.</p>
+    </div>
+    <div class="world-grid">
+      <div class="world-card tall"><img src="assets/burj.jpg" alt="Бурдж-Халифа, Дубай, ОАЭ"><div class="caption">Бурдж-Халифа, Дубай, ОАЭ</div></div>
+      <div class="world-card"><img src="assets/japan-bridge.jpg" alt="Кабельный мост, Япония"><div class="caption">Кабельный мост, Япония</div></div>
+      <div class="world-card"><img src="assets/atyrau-bridge.jpg" alt="Атырауский мост, Астана, РК"><div class="caption">Атырауский мост, Астана, РК</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNERS ================= -->
+<section id="partners">
+  <div class="card-section">
+    <h2 class="section-title">Наши <span class="accent">партнеры</span></h2>
+    <div class="partners-grid">
+      <div class="partner-card" title="BAZIS">
+        <img src="assets/logo-bazis.png" alt="BAZIS">
+      </div>
+      <div class="partner-card" title="BI GROUP">
+        <img src="assets/logo-bigroup.png" alt="BI GROUP">
+      </div>
+      <div class="partner-card" title="ART Construction">
+        <img src="assets/logo-art.jpg" alt="ART Construction">
+      </div>
+      <div class="partner-card" title="Жолашар ЖД Сервис">
+        <img src="assets/logo-zholashar.png" alt="Жолашар ЖД Сервис">
+      </div>
+      <div class="partner-card dark" title="Eagle Eye Construction">
+        <img src="assets/logo-eagle.png" alt="Eagle Eye Construction">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORDER FORM ================= -->
+<section id="order">
+  <div class="cta-section">
+    <div>
+      <h2>Оставьте заявку и получите расчет стоимости бетона</h2>
+      <p class="sub">Мы свяжемся с вами в течение дня и проконсультируем.</p>
+      <form class="form" id="orderForm">
+        <input type="text" name="volume" placeholder="Количество бетона (в тоннах)">
+        <input type="text" name="company" placeholder="Название компании">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="+7 (000) 000-00-00" required>
+        <label class="agree"><input type="checkbox" checked required> Согласен с Политикой конфиденциальности</label>
+        <button class="btn btn-white" type="submit" style="justify-self:start">Отправить</button>
+      </form>
+    </div>
+    <img class="cta-img" src="assets/stroika.jpg" alt="Строители на объекте">
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="card-section">
+    <h2 class="section-title"><span class="accent">Ответы</span> на частые вопросы</h2>
+    <div class="faq" style="margin-top:36px">
+      <div class="faq-item open">
+        <button class="faq-q">В чем отличие вашего бетона?
+          <span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Наш бетон изготовлен по уникальной запатентованной технологии и позволяет экономить прежде всего на отсутствии необходимости его виброукладки. Трудозатраты уменьшаются в 3 раза. Имеет высокую прочность и более низкий вес. Применяется для изготовления уникальных бетонных конструкций.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Где находится ваш завод?
+          <span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Завод находится в черте г. Алматы по адресу: Казахстан, г. Алматы, ул. Бокейханова, 11 (Жетысуйский район). Благодаря удобной локации завода доставка возможна в любую точку города.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Делаете ли вы скидку на объем приобретаемого бетона?
+          <span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Да, условия при больших объемах обсуждаются индивидуально. Свяжитесь с нами по телефону +7 778 124 02 98 — менеджер рассчитает стоимость и подберет лучшие условия. Марки, не указанные в прайс-листе, производятся по договоренности.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Имеются ли сертификаты качества?
+          <span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Да, вся продукция сертифицирована и соответствует ГОСТу. Качество каждой партии проверяется собственной лабораторией. ЛМБ производится по Еврокодам EN 206-2017, принятым и действующим в Казахстане.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">В какие населённые пункты возможна доставка?
+          <span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Доставка осуществляется автобетоносмесителями по г. Алматы и до 50 км от города, от 3 000 тг/м3 в зависимости от расстояния. При доставке товарного бетона менее 10 м3 оплата производится за 10 м3.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARTNER CTA ================= -->
+<section>
+  <div class="partner">
+    <h2>Хотите стать нашим партнером<br>или приобрести франшизу?</h2>
+    <p>Оставьте контакты и наш менеджер свяжется с вами! Мы свяжемся с вами в течение дня и проконсультируем.</p>
+    <a class="btn btn-white" href="#order">Заказать обратный звонок</a>
+  </div>
+</section>
+
+<!-- ================= CONTACTS ================= -->
+<section id="contacts">
+  <div class="card-section">
+    <h2 class="section-title"><span class="accent">Контакты</span></h2>
+    <div class="contacts-grid" style="margin-top:36px">
+      <div class="contact-list">
+        <div class="contact-item">
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#0E34BD" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="#0E34BD" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <a href="mailto:office@lmb2022.kz">office@lmb2022.kz</a>
+        </div>
+        <div class="contact-item">
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z" stroke="#0E34BD" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="#0E34BD" stroke-width="2"/></svg></span>
+          <span>Казахстан, г. Алматы, ул. Бокейханова, 11</span>
+        </div>
+        <div class="contact-item">
+          <span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="#0E34BD" stroke-width="2" stroke-linejoin="round"/></svg></span>
+          <a href="tel:+77781240298">+7 778 124 02 98</a>
+        </div>
+        <div>
+          <p style="font-weight:700;letter-spacing:.1em;font-size:13px;margin-bottom:12px">СЛЕДИТЕ ЗА НОВОСТЯМИ</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/lmb.beton_almaty" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="#fff"/></svg></a>
+          </div>
+        </div>
+        <a class="btn btn-blue" href="#order" style="justify-self:start">Заказать обратный звонок</a>
+      </div>
+      <div class="map">
+        <div class="map-fallback">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z" stroke="#0E34BD" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="#0E34BD" stroke-width="2"/></svg>
+          <span>Казахстан, г. Алматы, ул. Бокейханова, 11</span>
+          <a class="btn btn-blue" href="https://yandex.ru/maps/?text=Алматы, улица Бокейханова 11" target="_blank" rel="noopener">Открыть на Яндекс.Картах</a>
+        </div>
+        <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91%D0%BE%D0%BA%D0%B5%D0%B9%D1%85%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%2011&z=16" title="ЛМБ на карте" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-card">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-lmb-img"><img src="assets/logo-lmb.jpg" alt="ЛМБ — Литой Модифицированный Бетон"></div>
+        <p style="color:rgba(255,255,255,.6);font-size:13.5px;max-width:260px">Литой Модифицированный Бетон — завод-производитель бетона в г. Алматы</p>
+      </div>
+      <div class="footer-col">
+        <nav>
+          <a href="#lmb">Преимущества</a>
+          <a href="#products">Каталог</a>
+          <a href="#about">О компании</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <div class="contact-mini">
+          <a href="mailto:office@lmb2022.kz">office@lmb2022.kz</a>
+          <span>Казахстан, г. Алматы, ул. Бокейханова, 11</span>
+          <a href="tel:+77781240298">+7 778 124 02 98</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-note">
+      <img class="fond-logo" src="assets/logo-fond.jpg" alt="Фонд науки — Science Fund">
+      <b>ҒЫЛЫМ ҚОРЫ · ФОНД НАУКИ</b>
+      <span>«Настоящий проект осуществлен/осуществляется в рамках реализации грантового финансирования коммерциализации РННТД, финансируемого за счет денежных средств ГУ «Комитет науки Министерства науки и высшего образования Республики Казахстан».</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING CONTACT BUTTON ================= -->
+<div class="fab" id="fab">
+  <a class="fab-item fab-phone" href="tel:+77781240298" aria-label="Позвонить">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+  </a>
+  <a class="fab-item fab-wa" href="https://wa.me/77781240298" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.2c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.1-.3.3-.1.6.1.3.7 1.1 1.5 1.8 1 .9 1.9 1.2 2.2 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2.1 1c.3.1.5.2.6.3.1.3.1.8-.2 1.3z"/></svg>
+  </a>
+  <button class="fab-main" id="fabMain" aria-label="Связаться с нами">
+    <svg class="ico-chat" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 12c0 4.1-4 7.5-9 7.5-1 0-2-.13-2.9-.38L4 21l1.2-3.6C3.8 16 3 14.1 3 12c0-4.1 4-7.5 9-7.5s9 3.4 9 7.5z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 11h7M8.5 13.5h4.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+    <svg class="ico-close" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#111214" stroke-width="2.4" stroke-linecap="round"/></svg>
+  </button>
+</div>
+
+<script>
+  // floating contact button
+  const fab = document.getElementById('fab');
+  document.getElementById('fabMain').addEventListener('click', () => fab.classList.toggle('open'));
+  document.addEventListener('click', e => { if (!fab.contains(e.target)) fab.classList.remove('open'); });
+
+  // mobile menu
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  burger.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  // director quote expand
+  const quoteToggle = document.getElementById('quoteToggle');
+  quoteToggle.addEventListener('click', () => {
+    const more = document.querySelector('.quote-more');
+    const open = more.style.display === 'block';
+    more.style.display = open ? 'none' : 'block';
+    quoteToggle.textContent = open ? window.tr('Читать полностью') : window.tr('Свернуть');
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    if (item.classList.contains('open')) a.style.maxHeight = a.scrollHeight + 'px';
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(o => {
+        o.classList.remove('open');
+        o.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // order form -> WhatsApp
+  document.getElementById('orderForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const msg = 'Заявка с сайта ЛМБ:%0A' +
+      'Имя: ' + encodeURIComponent(f.name.value) + '%0A' +
+      'Телефон: ' + encodeURIComponent(f.phone.value) + '%0A' +
+      (f.company.value ? 'Компания: ' + encodeURIComponent(f.company.value) + '%0A' : '') +
+      (f.volume.value ? 'Количество бетона (тонн): ' + encodeURIComponent(f.volume.value) : '');
+    window.open('https://wa.me/77781240298?text=' + msg, '_blank');
+  });
+</script>
+
+<script>
+/* ===================== i18n: RU / EN / KK / TR / ZH ===================== */
+(function(){
+  // order of translations in every array: [en, kk, tr, zh]; ru = original text in HTML
+  const T = {
+    // --- header / nav / buttons ---
+    "Литой Модифицированный Бетон":["Cast Modified Concrete","Құйылмалы Модификацияланған Бетон","Dökme Modifiye Beton","浇筑改性混凝土"],
+    "ЛМБ":["LMB","ЛМБ","LMB","LMB"],
+    "О компании":["About us","Компания туралы","Hakkımızda","关于我们"],
+    "Продукция":["Products","Өнімдер","Ürünler","产品"],
+    "Вопросы":["FAQ","Сұрақтар","SSS","常见问题"],
+    "Контакты":["Contacts","Байланыс","İletişim","联系方式"],
+    "Заказать звонок":["Request a call","Кері қоңырау","Sizi arayalım","预约回电"],
+    "Заказать обратный звонок":["Request a callback","Кері қоңырауға тапсырыс беру","Geri arama talep et","预约回电"],
+    "Заказать бетон":["Order concrete","Бетонға тапсырыс беру","Beton sipariş et","订购混凝土"],
+    "Связаться с нами":["Contact us","Бізбен байланысу","Bize ulaşın","联系我们"],
+    // --- hero ---
+    "от 20 900 тг за 1 м³ · Жетысуйский р-н, г. Алматы":["From 20,900 KZT per 1 m³ · Zhetysu district, Almaty","1 м³ үшін 20 900 теңгеден · Жетісу ауданы, Алматы қ.","1 m³ için 20.900 KZT'den · Jetisu ilçesi, Almatı","每立方米20,900坚戈起 · 阿拉木图市杰特苏区"],
+    "Товарный бетон от М100 до М500. Литой модифицированный бетон не имеет аналогов в Казахстане. Проверка качества своей лабораторией. Завод находится в черте г. Алматы.":["Commercial concrete from M100 to M500. Cast modified concrete has no analogues in Kazakhstan. Quality is checked by our own laboratory. The plant is located within Almaty city limits.","М100-ден М500-ге дейінгі тауарлық бетон. Құйылмалы модификацияланған бетонның Қазақстанда баламасы жоқ. Сапаны өз зертханамыз тексереді. Зауыт Алматы қаласының ішінде орналасқан.","M100'den M500'e kadar hazır beton. Dökme modifiye betonun Kazakistan'da benzeri yoktur. Kalite kendi laboratuvarımız tarafından kontrol edilir. Fabrika Almatı şehir sınırları içindedir.","M100至M500商品混凝土。浇筑改性混凝土在哈萨克斯坦独一无二。质量由自有实验室检测。工厂位于阿拉木图市区内。"],
+    // --- about ---
+    "ЛМБ 2022 — высокотехнологичная компания, которая была создана 30 ноября 2022 г. Наша компания ориентирована на производство продукции с высокой добавленной стоимостью, которая отличается своей уникальностью и инновационностью. Качество продукции, быстрая доставка по г. Алматы.":["LMB 2022 is a high-tech company founded on November 30, 2022. Our company focuses on manufacturing high value-added products distinguished by their uniqueness and innovation. Product quality and fast delivery across Almaty.","ЛМБ 2022 — 2022 жылғы 30 қарашада құрылған жоғары технологиялық компания. Біздің компания бірегейлігімен және инновациялылығымен ерекшеленетін жоғары қосылған құны бар өнім өндіруге бағытталған. Өнім сапасы, Алматы қаласы бойынша жылдам жеткізу.","LMB 2022, 30 Kasım 2022'de kurulan yüksek teknolojili bir şirkettir. Şirketimiz, benzersizliği ve yenilikçiliğiyle öne çıkan yüksek katma değerli ürünler üretmeye odaklanmıştır. Ürün kalitesi ve Almatı genelinde hızlı teslimat.","LMB 2022是一家成立于2022年11月30日的高科技公司。我们公司专注于生产具有独特性和创新性的高附加值产品。产品质量可靠，阿拉木图市内快速配送。"],
+    "год основания компании":["year the company was founded","компанияның құрылған жылы","şirketin kuruluş yılı","公司成立年份"],
+    "марки товарного бетона":["commercial concrete grades","тауарлық бетон маркалары","hazır beton sınıfları","商品混凝土标号"],
+    "0 аналогов":["No analogues","Баламасы жоқ","Benzersiz","独一无二"],
+    "ЛМБ не имеет аналогов в Казахстане":["LMB has no analogues in Kazakhstan","ЛМБ-ның Қазақстанда баламасы жоқ","LMB'nin Kazakistan'da benzeri yok","LMB在哈萨克斯坦没有同类产品"],
+    "Ахметов Д.А.":["D.A. Akhmetov","Ахметов Д.А.","D.A. Ahmetov","阿赫梅托夫 D.A."],
+    "профессор, доктор строительных наук":["Professor, Doctor of Construction Sciences","профессор, құрылыс ғылымдарының докторы","Profesör, İnşaat Bilimleri Doktoru","教授，建筑科学博士"],
+    "Ахметов Д.А. — директор компании ЛМБ":["D.A. Akhmetov — Director of LMB","Ахметов Д.А. — ЛМБ компаниясының директоры","D.A. Ahmetov — LMB Şirket Müdürü","阿赫梅托夫 D.A. — LMB公司经理"],
+    "Читать полностью":["Read more","Толық оқу","Devamını oku","阅读全文"],
+    "Свернуть":["Collapse","Жию","Gizle","收起"],
+    // --- director quote ---
+    "«Республика Казахстан ставит перед собой грандиозные задачи, воплощение многих из которых возможно именно в строительной отрасли. Строительная отрасль в Республике Казахстан является одним из ведущих сегментов экономики страны. Но при реализации новых инфраструктурных объектов появляются и новые требования к строительным материалам, которые должны иметь повышенные прочностные и эксплуатационные характеристики. Это касается гидротехнических, транспортных сооружений, подвесных мостов, высотных зданий, частного жилого строительства и других объектов гражданского и промышленного строительства.":["“The Republic of Kazakhstan sets ambitious goals for itself, many of which can be achieved precisely in the construction industry. The construction industry in the Republic of Kazakhstan is one of the leading segments of the country's economy. However, the implementation of new infrastructure projects brings new requirements for construction materials, which must have enhanced strength and performance characteristics. This applies to hydraulic engineering and transport structures, suspension bridges, high-rise buildings, private residential construction and other civil and industrial construction projects.","«Қазақстан Республикасы алдына зор міндеттер қойып отыр, олардың көпшілігін жүзеге асыру дәл құрылыс саласында мүмкін. Құрылыс саласы Қазақстан Республикасында ел экономикасының жетекші сегменттерінің бірі болып табылады. Алайда жаңа инфрақұрылымдық нысандарды іске асыру кезінде құрылыс материалдарына жаңа талаптар пайда болады: олар жоғары беріктік және пайдалану сипаттамаларына ие болуы тиіс. Бұл гидротехникалық, көлік құрылыстарына, аспалы көпірлерге, биік ғимараттарға, жеке тұрғын үй құрылысына және азаматтық пен өнеркәсіптік құрылыстың басқа да нысандарына қатысты.","“Kazakistan Cumhuriyeti kendine büyük hedefler koymaktadır ve bunların birçoğu tam da inşaat sektöründe gerçekleştirilebilir. İnşaat sektörü, Kazakistan Cumhuriyeti ekonomisinin önde gelen segmentlerinden biridir. Ancak yeni altyapı projelerinin hayata geçirilmesiyle birlikte, yapı malzemelerine yönelik daha yüksek dayanım ve performans özellikleri gerektiren yeni talepler ortaya çıkmaktadır. Bu; hidrolik yapılar, ulaşım yapıları, asma köprüler, yüksek binalar, özel konut inşaatı ve diğer sivil ve endüstriyel yapılar için geçerlidir.","“哈萨克斯坦共和国为自己设定了宏伟的目标，其中许多正是要在建筑行业中实现。建筑业是哈萨克斯坦共和国经济的主导领域之一。然而，在实施新的基础设施项目时，对建筑材料提出了新的要求：它们必须具备更高的强度和使用性能。这涉及水利工程、交通设施、悬索桥、高层建筑、私人住宅建设以及其他民用和工业建筑项目。"],
+    "Надо отметить, что новые условия рынка диктуют необходимость снижения финансирования на строительные нужды, при этом основными условиями являются сокращение сроков строительства без потери качественных характеристик. Также одним из важных показателей при возведении зданий и сооружений является снижение уровня шума и вибраций, возникающих во время строительных работ, возможность бетонирования конструкций сложной пространственной геометрии, в том числе густоармированных, что особенно актуально в густонаселенных и сейсмоопасных регионах страны.":["It should be noted that new market conditions dictate the need to reduce construction financing, while the key requirements are shorter construction times without any loss of quality. Another important factor in the construction of buildings and structures is reducing the noise and vibration generated during construction work, as well as the ability to concrete structures of complex spatial geometry, including densely reinforced ones, which is especially relevant in the country's densely populated and earthquake-prone regions.","Айта кету керек, нарықтың жаңа жағдайлары құрылыс қажеттіліктерін қаржыландыруды азайтуды талап етеді, бұл ретте негізгі шарттар — сапалық сипаттамаларды жоғалтпай құрылыс мерзімдерін қысқарту. Сондай-ақ ғимараттар мен құрылыстарды тұрғызу кезіндегі маңызды көрсеткіштердің бірі — құрылыс жұмыстары кезінде пайда болатын шу мен діріл деңгейін төмендету, күрделі кеңістіктік геометриялы, соның ішінде тығыз арматураланған конструкцияларды бетондау мүмкіндігі; бұл әсіресе елдің халқы тығыз орналасқан және сейсмикалық қауіпті аймақтарында өзекті.","Belirtmek gerekir ki, yeni piyasa koşulları inşaat finansmanının azaltılmasını zorunlu kılmakta; temel şartlar ise kalite özelliklerinden ödün vermeden inşaat sürelerinin kısaltılmasıdır. Ayrıca bina ve yapıların inşasında önemli göstergelerden biri, inşaat çalışmaları sırasında oluşan gürültü ve titreşim seviyesinin düşürülmesi ile yoğun donatılı olanlar da dahil olmak üzere karmaşık uzamsal geometriye sahip yapıların betonlanabilmesidir; bu, ülkenin yoğun nüfuslu ve deprem riski taşıyan bölgelerinde özellikle önemlidir.","值得注意的是，新的市场环境要求降低建设资金投入，同时基本条件是在不损失质量特性的前提下缩短工期。此外，建造建筑物和构筑物时的重要指标还包括降低施工过程中产生的噪音和振动水平，以及浇筑复杂空间几何形状（包括密集配筋）结构的能力——这在人口稠密和地震多发地区尤为重要。"],
+    "Данные задачи можно решить путем применения в строительстве литых модифицированных бетонов (ЛМБ) с самоуплотняющимися свойствами, которые находят все более широкое применение в мире, за счет положительного экономического эффекта, о чем свидетельствуют как зарубежный, так и отечественный опыт. Самоуплотняющийся бетон в настоящее время широко используется в промышленном и гражданском строительстве с целью сокращения сроков возведения крупномасштабных сооружений.":["These challenges can be addressed by using cast modified concrete (LMB) with self-compacting properties in construction. Such concrete is finding ever wider application around the world thanks to its positive economic effect, as evidenced by both international and domestic experience. Self-compacting concrete is currently widely used in industrial and civil construction to shorten the construction time of large-scale structures.","Бұл міндеттерді құрылыста өзін-өзі тығыздайтын қасиеттері бар құйылмалы модификацияланған бетондарды (ЛМБ) қолдану арқылы шешуге болады. Олар оң экономикалық әсерінің арқасында әлемде барған сайын кеңінен қолданылуда, бұған шетелдік те, отандық та тәжірибе дәлел. Өзін-өзі тығыздайтын бетон қазіргі уақытта ірі ауқымды құрылыстарды тұрғызу мерзімдерін қысқарту мақсатында өнеркәсіптік және азаматтық құрылыста кеңінен пайдаланылады.","Bu sorunlar, inşaatta kendiliğinden yerleşen özelliklere sahip dökme modifiye betonların (LMB) kullanılmasıyla çözülebilir. Bu betonlar, sağladıkları olumlu ekonomik etki sayesinde dünyada giderek daha yaygın kullanım alanı bulmaktadır; buna hem yabancı hem de yerli deneyimler tanıklık etmektedir. Kendiliğinden yerleşen beton, günümüzde büyük ölçekli yapıların yapım sürelerini kısaltmak amacıyla endüstriyel ve sivil inşaatta yaygın olarak kullanılmaktadır.","这些问题可以通过在建筑中使用具有自密实性能的浇筑改性混凝土（LMB）来解决。凭借良好的经济效益，这种混凝土在世界范围内的应用越来越广泛，国内外的经验都证明了这一点。目前，自密实混凝土广泛应用于工业和民用建筑，以缩短大型建筑物的建造工期。"],
+    "В начале 2000-х годов по всей Европе стали появляться первые предпосылки для допуска и распространения самоуплотняющегося и литого бетона.":["In the early 2000s, the first prerequisites for the approval and spread of self-compacting and cast concrete began to appear across Europe.","2000-шы жылдардың басында бүкіл Еуропада өзін-өзі тығыздайтын және құйылмалы бетонды рұқсат ету мен таратудың алғашқы алғышарттары пайда бола бастады.","2000'li yılların başında, kendiliğinden yerleşen ve dökme betonun onaylanması ve yaygınlaşması için ilk koşullar tüm Avrupa'da ortaya çıkmaya başladı.","2000年代初，自密实混凝土和浇筑混凝土获得准入并推广的最初条件开始在整个欧洲出现。"],
+    "Самоуплотняющийся бетон был впервые разработан в 1988 году для получения прочных бетонных конструкций сложной геометрической формы. С тех пор были проведены различные научные исследования, и этот вид бетона стал применяться в практических сооружениях в Японии, в основном крупными строительными компаниями. С целью превращения самоуплотняющегося бетона из специального в стандартный бетон учеными были проведены серьезные исследования по разработке рационального метода составления смеси и методов испытаний на самоуплотняемость.":["Self-compacting concrete was first developed in 1988 to produce durable concrete structures of complex geometric shapes. Since then, various scientific studies have been carried out, and this type of concrete has come into practical use in structures in Japan, mainly by large construction companies. In order to turn self-compacting concrete from a special into a standard concrete, scientists have conducted extensive research into developing a rational mix design method and self-compactability testing methods.","Өзін-өзі тығыздайтын бетон алғаш рет 1988 жылы күрделі геометриялық пішінді берік бетон конструкцияларын алу үшін әзірленді. Содан бері түрлі ғылыми зерттеулер жүргізілді және бетонның бұл түрі Жапониядағы практикалық құрылыстарда, негізінен ірі құрылыс компанияларымен қолданыла бастады. Өзін-өзі тығыздайтын бетонды арнайы бетоннан стандартты бетонға айналдыру мақсатында ғалымдар қоспаны құрастырудың ұтымды әдісін және өзін-өзі тығыздалуға сынау әдістерін әзірлеу бойынша ауқымды зерттеулер жүргізді.","Kendiliğinden yerleşen beton, karmaşık geometrik formlara sahip dayanıklı beton yapılar elde etmek amacıyla ilk kez 1988 yılında geliştirildi. O zamandan bu yana çeşitli bilimsel araştırmalar yapılmış ve bu beton türü Japonya'daki uygulama yapılarında, çoğunlukla büyük inşaat şirketleri tarafından kullanılmaya başlanmıştır. Kendiliğinden yerleşen betonu özel betondan standart betona dönüştürmek amacıyla bilim insanları, rasyonel karışım tasarımı yöntemi ve kendiliğinden yerleşme test yöntemleri geliştirmek için ciddi araştırmalar yürütmüştür.","自密实混凝土于1988年首次研发，用于制造具有复杂几何形状的高强度混凝土结构。此后开展了各类科学研究，这种混凝土开始应用于日本的实际工程中，主要由大型建筑公司使用。为了将自密实混凝土从特种混凝土转变为标准混凝土，科学家们在合理配合比设计方法和自密实性检测方法方面进行了深入研究。"],
+    "В 2017 году на базе Научно-исследовательского института строительных материалов начались работы над проектом литых модифицированных бетонов, и команда исследователей работала над этим проектом сначала в лабораторных условиях, а далее уже апробировала и доказала работоспособность идеи и на производственной площадке. Основной задачей было проектирование состава бетонной смеси на местных сырьевых компонентах с использованием добавок на основе поликарбоксилатных эфиров местного казахстанского производства и тонкодисперсных наполнителей — отходов техногенных производств.":["In 2017, work on the cast modified concrete project began at the Research Institute of Construction Materials. The research team first worked on the project in laboratory conditions and then tested and proved the viability of the idea at a production site. The main task was to design a concrete mix based on local raw materials, using admixtures based on polycarboxylate ethers of local Kazakhstani production and finely dispersed fillers — waste from industrial production.","2017 жылы Құрылыс материалдары ғылыми-зерттеу институтының базасында құйылмалы модификацияланған бетондар жобасы бойынша жұмыстар басталды. Зерттеушілер тобы бұл жобамен алдымен зертханалық жағдайда жұмыс істеп, кейін идеяның жұмысқа қабілеттілігін өндірістік алаңда да сынап, дәлелдеді. Негізгі міндет — жергілікті шикізат компоненттері негізінде, жергілікті қазақстандық өндірістің поликарбоксилатты эфирлері негізіндегі қоспаларды және техногендік өндірістердің қалдықтары — ұсақ дисперсті толтырғыштарды пайдалана отырып, бетон қоспасының құрамын жобалау болды.","2017 yılında Yapı Malzemeleri Araştırma Enstitüsü bünyesinde dökme modifiye beton projesi üzerinde çalışmalar başladı. Araştırma ekibi proje üzerinde önce laboratuvar koşullarında çalıştı, ardından fikrin uygulanabilirliğini üretim sahasında da test ederek kanıtladı. Temel görev; yerel hammadde bileşenlerine dayanan, yerli Kazakistan üretimi polikarboksilat eter esaslı katkılar ve endüstriyel üretim atıkları olan ince dispers dolgu maddeleri kullanılarak beton karışımının tasarlanmasıydı.","2017年，浇筑改性混凝土项目在建筑材料科学研究院启动。研究团队先在实验室条件下开展该项目，随后在生产现场验证并证明了这一理念的可行性。主要任务是基于本地原材料设计混凝土配合比，使用哈萨克斯坦本地生产的聚羧酸醚类外加剂以及工业生产废料制成的细分散填料。"],
+    "Сегодня мы с радостью представляем Вам — строительство инновационного завода по производству отечественного литого модифицированного бетона. Этот проект реализуется совместно с Фондом науки, который на конкурсной основе оценил перспективы внедрения ЛМБ в строительной сфере Казахстана и предоставил грант на его строительство. И теперь завод сможет обеспечить потребности отечественной строительной отрасли в инновационном литом модифицированном бетоне. Необходимо отметить, что проекты Фонда Науки способствуют росту научного потенциала страны и помогают воплотить научные изыскания в жизнь. Также стоит отметить, что литой модифицированный бетон — отечественный продукт, который попутно решает вопросы экологии путем применения отходов ферросплавных производств, снижения шумовой и вибрационной нагрузки, сокращение сроков строительства. Все это должно быть применено в строительной индустрии и выражает нашу заботу о процветании казахстанского общества».":["Today we are pleased to present to you the construction of an innovative plant for the production of domestic cast modified concrete. This project is being implemented jointly with the Science Foundation, which competitively assessed the prospects of introducing LMB into Kazakhstan's construction sector and provided a grant for the plant's construction. The plant will now be able to meet the needs of the domestic construction industry for innovative cast modified concrete. It should be noted that the Science Foundation's projects contribute to the growth of the country's scientific potential and help bring scientific research to life. It is also worth noting that cast modified concrete is a domestic product that along the way addresses environmental issues through the use of ferroalloy production waste, the reduction of noise and vibration, and shorter construction times. All of this should be applied in the construction industry and expresses our concern for the prosperity of Kazakhstani society.”","Бүгін біз Сіздерге отандық құйылмалы модификацияланған бетон өндіретін инновациялық зауыттың құрылысын қуанышпен таныстырамыз. Бұл жоба Ғылым қорымен бірлесіп жүзеге асырылуда: қор конкурстық негізде ЛМБ-ны Қазақстанның құрылыс саласына енгізу перспективаларын бағалап, оның құрылысына грант берді. Енді зауыт отандық құрылыс саласының инновациялық құйылмалы модификацияланған бетонға деген қажеттіліктерін қамтамасыз ете алады. Айта кету керек, Ғылым қорының жобалары елдің ғылыми әлеуетінің өсуіне ықпал етіп, ғылыми ізденістерді өмірге енгізуге көмектеседі. Сондай-ақ құйылмалы модификацияланған бетон — ферроқорытпа өндірістерінің қалдықтарын қолдану, шу мен діріл жүктемесін азайту, құрылыс мерзімдерін қысқарту арқылы экология мәселелерін де қатар шешетін отандық өнім екенін атап өткен жөн. Мұның бәрі құрылыс индустриясында қолданылуы тиіс және қазақстандық қоғамның өркендеуіне деген қамқорлығымызды білдіреді».","Bugün sizlere yerli dökme modifiye beton üretimi yapacak yenilikçi bir fabrikanın inşaatını memnuniyetle sunuyoruz. Bu proje, LMB'nin Kazakistan inşaat sektörüne kazandırılma potansiyelini rekabetçi bir değerlendirmeyle inceleyen ve fabrikanın inşası için hibe sağlayan Bilim Fonu ile ortaklaşa yürütülmektedir. Artık fabrika, yerli inşaat sektörünün yenilikçi dökme modifiye beton ihtiyacını karşılayabilecektir. Bilim Fonu projelerinin ülkenin bilimsel potansiyelinin büyümesine katkıda bulunduğunu ve bilimsel araştırmaların hayata geçirilmesine yardımcı olduğunu belirtmek gerekir. Ayrıca dökme modifiye betonun; ferroalyaj üretim atıklarının kullanılması, gürültü ve titreşim yükünün azaltılması ve inşaat sürelerinin kısaltılması yoluyla çevre sorunlarını da çözen yerli bir ürün olduğunu vurgulamak gerekir. Tüm bunlar inşaat sektöründe uygulanmalı ve Kazakistan toplumunun refahına verdiğimiz önemi göstermektedir.”","今天，我们高兴地向您介绍生产国产浇筑改性混凝土的创新工厂建设项目。该项目与科学基金会合作实施——基金会通过竞争性评估认可了LMB在哈萨克斯坦建筑领域的应用前景，并为工厂建设提供了资助。现在，工厂将能够满足国内建筑行业对创新浇筑改性混凝土的需求。需要指出的是，科学基金会的项目有助于提升国家的科研潜力，并帮助将科研成果付诸实践。还值得一提的是，浇筑改性混凝土是国产产品，它同时通过利用铁合金生产废料、降低噪音和振动负荷、缩短工期来解决环保问题。所有这些都应在建筑行业中得到应用，体现了我们对哈萨克斯坦社会繁荣的关切。”"],
+    // --- products ---
+    "Вся продукция сертифицирована и соответствует ГОСТу. Цены указаны за 1 куб.м.":["All products are certified and comply with GOST standards. Prices are per 1 cubic meter.","Барлық өнім сертификатталған және МЕМСТ-қа сәйкес келеді. Бағалар 1 текше метрге көрсетілген.","Tüm ürünler sertifikalıdır ve GOST standartlarına uygundur. Fiyatlar 1 metreküp içindir.","所有产品均已认证并符合国家标准（GOST）。价格为每立方米。"],
+    "Литой модифицированный бетон (М-350)":["Cast modified concrete (M-350)","Құйылмалы модификацияланған бетон (М-350)","Dökme modifiye beton (M-350)","浇筑改性混凝土（M-350）"],
+    "Литой модифицированный бетон (М-400)":["Cast modified concrete (M-400)","Құйылмалы модификацияланған бетон (М-400)","Dökme modifiye beton (M-400)","浇筑改性混凝土（M-400）"],
+    "Товарный бетон М – 100 (В-7,5)":["Commercial concrete M-100 (B-7.5)","Тауарлық бетон М – 100 (В-7,5)","Hazır beton M-100 (B-7,5)","商品混凝土 M-100（B-7.5）"],
+    "Товарный бетон М – 350 (В-25)":["Commercial concrete M-350 (B-25)","Тауарлық бетон М – 350 (В-25)","Hazır beton M-350 (B-25)","商品混凝土 M-350（B-25）"],
+    "Товарный бетон М – 400 (В-30)":["Commercial concrete M-400 (B-30)","Тауарлық бетон М – 400 (В-30)","Hazır beton M-400 (B-30)","商品混凝土 M-400（B-30）"],
+    "20 900 тг.":["20,900 KZT","20 900 тг.","20.900 KZT","20,900坚戈"],
+    "27 500 тг.":["27,500 KZT","27 500 тг.","27.500 KZT","27,500坚戈"],
+    "29 000 тг.":["29,000 KZT","29 000 тг.","29.000 KZT","29,000坚戈"],
+    "36 500 тг.":["36,500 KZT","36 500 тг.","36.500 KZT","36,500坚戈"],
+    "37 700 тг.":["37,700 KZT","37 700 тг.","37.700 KZT","37,700坚戈"],
+    "цена за 1 куб.м":["price per 1 cubic meter","1 текше метр бағасы","1 m³ fiyatı","每立方米价格"],
+    "Завод в черте г. Алматы, быстрая доставка по городу и до 50 км рядом. От М100 до М500.":["The plant is within Almaty city limits; fast delivery across the city and up to 50 km around. From M100 to M500.","Зауыт Алматы қаласының ішінде; қала бойынша және маңайдағы 50 км-ге дейін жылдам жеткізу. М100-ден М500-ге дейін.","Fabrika Almatı şehir sınırları içindedir; şehir genelinde ve 50 km'ye kadar çevreye hızlı teslimat. M100'den M500'e kadar.","工厂位于阿拉木图市区内，市内及周边50公里范围内快速配送。M100至M500。"],
+    "Доставка осуществляется автобетоносмесителями от 3 000 тг/м3, в зависимости от расстояния.":["Delivery is carried out by concrete mixer trucks from 3,000 KZT/m³, depending on distance.","Жеткізу автобетонараластырғыштармен, қашықтыққа байланысты 3 000 тг/м³-ден бастап жүзеге асырылады.","Teslimat, mesafeye bağlı olarak 3.000 KZT/m³'ten başlayan fiyatlarla transmikserlerle yapılır.","由混凝土搅拌车配送，视距离而定，每立方米3,000坚戈起。"],
+    "При доставке товарного бетона менее 10 м3, оплата производится за 10 м3.":["For deliveries of less than 10 m³ of commercial concrete, payment is charged for 10 m³.","Тауарлық бетонды 10 м³-ден аз жеткізген жағдайда төлем 10 м³ үшін алынады.","10 m³'ten az hazır beton teslimatlarında ücret 10 m³ üzerinden alınır.","商品混凝土配送量不足10立方米时，按10立方米计费。"],
+    "Разновидности товарного бетона, литой модифицированный бетон, высокое качество, собственная лаборатория.":["Various types of commercial concrete, cast modified concrete, high quality, in-house laboratory.","Тауарлық бетон түрлері, құйылмалы модификацияланған бетон, жоғары сапа, өз зертханамыз.","Çeşitli hazır beton türleri, dökme modifiye beton, yüksek kalite, kendi laboratuvarımız.","多种商品混凝土、浇筑改性混凝土，品质优良，自有实验室。"],
+    "Марки, не указанные в прайс-листе, производятся по договоренности.":["Grades not listed in the price list are produced by agreement.","Прайс-парақта көрсетілмеген маркалар келісім бойынша өндіріледі.","Fiyat listesinde yer almayan sınıflar anlaşmaya göre üretilir.","价目表中未列出的标号可协商生产。"],
+    "Вся продукция сертифицирована и соответствует ГОСТу.":["All products are certified and comply with GOST standards.","Барлық өнім сертификатталған және МЕМСТ-қа сәйкес келеді.","Tüm ürünler sertifikalıdır ve GOST standartlarına uygundur.","所有产品均已认证并符合国家标准（GOST）。"],
+    "Быстрая доставка в любую точку города за счет удобной локации завода.":["Fast delivery to any part of the city thanks to the plant's convenient location.","Зауыттың қолайлы орналасуы арқасында қаланың кез келген нүктесіне жылдам жеткізу.","Fabrikanın uygun konumu sayesinde şehrin her noktasına hızlı teslimat.","得益于工厂的便利位置，可快速配送至城市任何地点。"],
+    "Закажите бетон прямо сейчас:":["Order concrete right now:","Бетонға дәл қазір тапсырыс беріңіз:","Hemen beton sipariş edin:","立即订购混凝土："],
+    "или":["or","немесе","veya","或"],
+    // --- lmb info ---
+    "Литой модифицированный бетон не имеет аналогов на территории Республики Казахстан, при этом обладает искомыми и необходимыми в современном строительстве свойствами и физико-техническими характеристиками. Необходимо отметить, что ЛМБ производится уже по Еврокодам EN 206-2017, уже принятым и действующим в Казахстане.":["Cast modified concrete has no analogues in the Republic of Kazakhstan, while possessing the properties and physical-technical characteristics sought and required in modern construction. It should be noted that LMB is produced according to Eurocodes EN 206-2017, already adopted and in force in Kazakhstan.","Құйылмалы модификацияланған бетонның Қазақстан Республикасы аумағында баламасы жоқ, сонымен қатар ол заманауи құрылыста қажетті қасиеттер мен физика-техникалық сипаттамаларға ие. Айта кету керек, ЛМБ Қазақстанда қабылданып, қолданыста жүрген EN 206-2017 Еурокодтары бойынша өндіріледі.","Dökme modifiye betonun Kazakistan Cumhuriyeti'nde benzeri yoktur; aynı zamanda modern inşaatta aranan ve gerekli olan özelliklere ve fiziko-teknik karakteristiklere sahiptir. LMB'nin, Kazakistan'da kabul edilmiş ve yürürlükte olan EN 206-2017 Eurokodlarına göre üretildiğini belirtmek gerekir.","浇筑改性混凝土在哈萨克斯坦共和国境内没有同类产品，同时具备现代建筑所需的各项性能和物理技术特性。值得注意的是，LMB按照哈萨克斯坦已采用并生效的欧洲规范EN 206-2017生产。"],
+    "в 3 раза":["3 times","3 есе","3 kat","3倍"],
+    "сокращаются сроки и затраты труда":["reduction in construction time and labor costs","мерзімдер мен еңбек шығындары қысқарады","süre ve işçilik maliyetleri azalır","缩短工期并降低人工成本"],
+    "30 минут":["30 minutes","30 минут","30 dakika","30分钟"],
+    "время укладки одного куба ЛМБ":["placement time for one cubic meter of LMB","бір текше метр ЛМБ төсеу уақыты","1 m³ LMB'nin yerleştirme süresi","每立方米LMB的浇筑时间"],
+    "Отсутствие технологии виброуплотнения":["No vibration compaction required","Дірілмен тығыздау технологиясының қажеті жоқ","Vibrasyonla sıkıştırma gerektirmez","无需振捣工艺"],
+    "Уменьшение сроков укладки бетона":["Shorter concrete placement time","Бетон төсеу мерзімдерінің қысқаруы","Daha kısa beton dökme süresi","缩短混凝土浇筑时间"],
+    "Качественная поверхность (класс А1) без трещин и раковин":["High-quality surface (class A1) without cracks and voids","Жарықтар мен қуыстарсыз сапалы бет (А1 класы)","Çatlaksız ve boşluksuz kaliteli yüzey (A1 sınıfı)","优质表面（A1级），无裂缝和孔洞"],
+    "Снижение себестоимости строительства":["Lower construction costs","Құрылыстың өзіндік құнының төмендеуі","Daha düşük inşaat maliyeti","降低建筑成本"],
+    // --- tech table ---
+    "Технические характеристики":["Technical specifications","Техникалық сипаттамалар","Teknik özellikler","技术参数"],
+    "Сравнение ЛМБ со стандартным бетоном М350":["Comparison of LMB with standard M350 concrete","ЛМБ-ны стандартты М350 бетонымен салыстыру","LMB ile standart M350 betonunun karşılaştırması","LMB与标准M350混凝土的对比"],
+    "Стандартный бетон М350":["Standard concrete M350","Стандартты бетон М350","Standart beton M350","标准混凝土M350"],
+    "Минимальная прочность при сжатии в возрасте 28 суток":["Minimum compressive strength at 28 days","28 тәуліктегі ең төменгі сығылу беріктігі","28 günlük minimum basınç dayanımı","28天最低抗压强度"],
+    "Достижимая прочность при сжатии в возрасте 28 суток":["Achievable compressive strength at 28 days","28 тәуліктегі қол жеткізілетін сығылу беріктігі","28 günlük ulaşılabilir basınç dayanımı","28天可达抗压强度"],
+    "Прочность в возрасте 2 суток = (от 50% от марочной прочности)":["Strength at 2 days = (from 50% of grade strength)","2 тәуліктегі беріктік = (марка беріктігінің 50%-ынан)","2 günlük dayanım = (sınıf dayanımının %50'sinden itibaren)","2天强度 =（标号强度的50%起）"],
+    "Прочность в возрасте 7 суток = (110% от марочной прочности)":["Strength at 7 days = (110% of grade strength)","7 тәуліктегі беріктік = (марка беріктігінің 110%-ы)","7 günlük dayanım = (sınıf dayanımının %110'u)","7天强度 =（标号强度的110%）"],
+    "Удобоукладываемость — расплыв конуса":["Workability — slump flow","Төселгіштік — конус жайылуы","İşlenebilirlik — yayılma (slump flow)","和易性——坍落扩展度"],
+    "Время истечения из V-образной воронки":["V-funnel flow time","V-тәрізді воронкадан ағу уақыты","V-hunisi akış süresi","V形漏斗流出时间"],
+    "32 МПа":["32 MPa","32 МПа","32 MPa","32兆帕"],
+    "54 МПа":["54 MPa","54 МПа","54 MPa","54兆帕"],
+    "40 МПа":["40 MPa","40 МПа","40 MPa","40兆帕"],
+    "от 16,00 МПа":["from 16.00 MPa","16,00 МПа-дан","16,00 MPa'dan itibaren","16.00兆帕起"],
+    "9,6 МПа":["9.6 MPa","9,6 МПа","9,6 MPa","9.6兆帕"],
+    "от 35,2 МПа":["from 35.2 MPa","35,2 МПа-дан","35,2 MPa'dan itibaren","35.2兆帕起"],
+    "22,4 МПа":["22.4 MPa","22,4 МПа","22,4 MPa","22.4兆帕"],
+    "от 660 до 700 мм":["660 to 700 mm","660-тан 700 мм-ге дейін","660–700 mm","660至700毫米"],
+    "220–250 мм":["220–250 mm","220–250 мм","220–250 mm","220–250毫米"],
+    "недостаточно для применения безвибрационных технологий строительных работ":["insufficient for vibration-free construction technologies","дірілсіз құрылыс технологияларын қолдану үшін жеткіліксіз","titreşimsiz inşaat teknolojileri için yetersiz","不足以采用免振捣施工工艺"],
+    "9–12 секунд":["9–12 seconds","9–12 секунд","9–12 saniye","9–12秒"],
+    "≥0,9":["≥0.9","≥0,9","≥0,9","≥0.9"],
+    "Товарный бетон не имеет таких показателей как время истечения и проходимость через препятствия в конструкции.":["Commercial concrete has no such indicators as flow time and the ability to pass through obstacles in the structure.","Тауарлық бетонда ағу уақыты және конструкциядағы кедергілерден өту қабілеті сияқты көрсеткіштер жоқ.","Hazır betonda akış süresi ve yapıdaki engellerden geçebilme gibi göstergeler bulunmaz.","商品混凝土没有流出时间和通过结构障碍能力等指标。"],
+    // --- world ---
+    "Мировая практика показывает, что разработка литого модифицированного бетона является необходимостью для обеспечения возрастающих потребностей строительной индустрии.":["Global practice shows that the development of cast modified concrete is a necessity to meet the growing needs of the construction industry.","Әлемдік тәжірибе көрсеткендей, құйылмалы модификацияланған бетонды әзірлеу құрылыс индустриясының өсіп келе жатқан қажеттіліктерін қамтамасыз ету үшін қажет.","Dünya pratiği, dökme modifiye betonun geliştirilmesinin inşaat sektörünün artan ihtiyaçlarını karşılamak için bir zorunluluk olduğunu göstermektedir.","世界实践表明，研发浇筑改性混凝土是满足建筑行业日益增长需求的必然选择。"],
+    "Появление новых амбициозных проектов в сфере строительства (таких, как протяженные подвесные мосты в Японии и Китае, комплексы крупных гидротехнических и транспортных сооружений в Голландии и ряд других) повысило требования к особо высокопрочным бетонам.":["The emergence of new ambitious construction projects (such as long suspension bridges in Japan and China, complexes of large hydraulic and transport structures in the Netherlands, and others) has raised the requirements for ultra-high-strength concrete.","Құрылыс саласындағы жаңа өршіл жобалардың пайда болуы (Жапония мен Қытайдағы ұзын аспалы көпірлер, Голландиядағы ірі гидротехникалық және көлік құрылыстарының кешендері және т.б.) аса жоғары беріктікті бетондарға қойылатын талаптарды арттырды.","İnşaat alanında yeni iddialı projelerin ortaya çıkması (Japonya ve Çin'deki uzun asma köprüler, Hollanda'daki büyük hidrolik ve ulaşım yapıları kompleksleri ve diğerleri) çok yüksek dayanımlı betonlara yönelik gereksinimleri artırmıştır.","建筑领域新的宏伟项目的出现（如日本和中国的长跨悬索桥、荷兰的大型水利和交通设施综合体等）提高了对超高强混凝土的要求。"],
+    "Бурдж-Халифа, Дубай, ОАЭ":["Burj Khalifa, Dubai, UAE","Бурдж-Халифа, Дубай, БАӘ","Burc Halife, Dubai, BAE","哈利法塔，迪拜，阿联酋"],
+    "Кабельный мост, Япония":["Cable bridge, Japan","Арқанды көпір, Жапония","Askı köprü, Japonya","斜拉桥，日本"],
+    "Атырауский мост, Астана, РК":["Atyrau Bridge, Astana, Kazakhstan","Атырау көпірі, Астана, ҚР","Atyrau Köprüsü, Astana, Kazakistan","阿特劳大桥，阿斯塔纳，哈萨克斯坦"],
+    // --- order form ---
+    "Оставьте заявку и получите расчет стоимости бетона":["Leave a request and get a concrete cost estimate","Өтінім қалдырып, бетон құнының есебін алыңыз","Talep bırakın, beton maliyet hesabınızı alın","提交申请，获取混凝土费用测算"],
+    "Мы свяжемся с вами в течение дня и проконсультируем.":["We will contact you within the day and provide a consultation.","Біз сізбен күн ішінде байланысып, кеңес береміз.","Gün içinde sizinle iletişime geçip danışmanlık sağlayacağız.","我们将在当天与您联系并提供咨询。"],
+    "Количество бетона (в тоннах)":["Amount of concrete (in tons)","Бетон мөлшері (тоннамен)","Beton miktarı (ton)","混凝土数量（吨）"],
+    "Название компании":["Company name","Компания атауы","Şirket adı","公司名称"],
+    "Ваше имя":["Your name","Есіміңіз","Adınız","您的姓名"],
+    "Согласен с Политикой конфиденциальности":["I agree with the Privacy Policy","Құпиялылық саясатымен келісемін","Gizlilik Politikasını kabul ediyorum","我同意隐私政策"],
+    "Отправить":["Send","Жіберу","Gönder","发送"],
+    // --- faq ---
+    "В чем отличие вашего бетона?":["What makes your concrete different?","Сіздің бетонның ерекшелігі неде?","Betonunuzun farkı nedir?","你们的混凝土有何不同？"],
+    "Наш бетон изготовлен по уникальной запатентованной технологии и позволяет экономить прежде всего на отсутствии необходимости его виброукладки. Трудозатраты уменьшаются в 3 раза. Имеет высокую прочность и более низкий вес. Применяется для изготовления уникальных бетонных конструкций.":["Our concrete is made using a unique patented technology and saves money primarily because it does not require vibration compaction. Labor costs are reduced by 3 times. It has high strength and lower weight. It is used for creating unique concrete structures.","Біздің бетон бірегей патенттелген технология бойынша жасалған және ең алдымен дірілмен төсеу қажеттілігінің жоқтығы есебінен үнемдеуге мүмкіндік береді. Еңбек шығындары 3 есе азаяды. Жоғары беріктікке және төмен салмаққа ие. Бірегей бетон конструкцияларын жасау үшін қолданылады.","Betonumuz benzersiz patentli bir teknolojiyle üretilir ve öncelikle vibrasyonla sıkıştırma gerektirmediği için tasarruf sağlar. İşçilik maliyetleri 3 kat azalır. Yüksek dayanıma ve daha düşük ağırlığa sahiptir. Benzersiz beton yapıların üretiminde kullanılır.","我们的混凝土采用独特的专利技术制造，最主要的节省在于无需振捣。人工成本降低3倍。强度高、重量更轻。适用于制造独特的混凝土结构。"],
+    "Где находится ваш завод?":["Where is your plant located?","Зауытыңыз қайда орналасқан?","Fabrikanız nerede?","你们的工厂在哪里？"],
+    "Завод находится в черте г. Алматы по адресу: Казахстан, г. Алматы, ул. Бокейханова, 11 (Жетысуйский район). Благодаря удобной локации завода доставка возможна в любую точку города.":["The plant is located within Almaty city limits at: 11 Bokeikhanov St., Almaty, Kazakhstan (Zhetysu district). Thanks to its convenient location, delivery is possible to any part of the city.","Зауыт Алматы қаласының ішінде мына мекенжайда орналасқан: Қазақстан, Алматы қ., Бөкейханов көшесі, 11 (Жетісу ауданы). Зауыттың қолайлы орналасуының арқасында қаланың кез келген нүктесіне жеткізу мүмкін.","Fabrika Almatı şehir sınırları içinde şu adreste yer almaktadır: Kazakistan, Almatı, Bokeyhanov Cad. No. 11 (Jetisu ilçesi). Uygun konumu sayesinde şehrin her noktasına teslimat mümkündür.","工厂位于阿拉木图市区内，地址：哈萨克斯坦阿拉木图市博克伊哈诺夫街11号（杰特苏区）。得益于便利的位置，可配送至城市任何地点。"],
+    "Делаете ли вы скидку на объем приобретаемого бетона?":["Do you offer volume discounts?","Сатып алынатын бетон көлеміне жеңілдік жасайсыздар ма?","Hacme göre indirim yapıyor musunuz?","购买量大时有折扣吗？"],
+    "Да, условия при больших объемах обсуждаются индивидуально. Свяжитесь с нами по телефону +7 778 124 02 98 — менеджер рассчитает стоимость и подберет лучшие условия. Марки, не указанные в прайс-листе, производятся по договоренности.":["Yes, terms for large volumes are discussed individually. Contact us at +7 778 124 02 98 — a manager will calculate the cost and offer the best terms. Grades not listed in the price list are produced by agreement.","Иә, үлкен көлемдер бойынша шарттар жеке талқыланады. Бізге +7 778 124 02 98 телефоны арқылы хабарласыңыз — менеджер құнын есептеп, ең тиімді шарттарды ұсынады. Прайс-парақта көрсетілмеген маркалар келісім бойынша өндіріледі.","Evet, büyük hacimler için koşullar ayrıca görüşülür. +7 778 124 02 98 numarasından bize ulaşın — yöneticimiz maliyeti hesaplayıp en iyi koşulları sunacaktır. Fiyat listesinde olmayan sınıflar anlaşmaya göre üretilir.","是的，大批量采购的条件可单独商议。请致电 +7 778 124 02 98——经理将为您核算费用并提供最优条件。价目表中未列出的标号可协商生产。"],
+    "Имеются ли сертификаты качества?":["Do you have quality certificates?","Сапа сертификаттары бар ма?","Kalite sertifikalarınız var mı?","有质量证书吗？"],
+    "Да, вся продукция сертифицирована и соответствует ГОСТу. Качество каждой партии проверяется собственной лабораторией. ЛМБ производится по Еврокодам EN 206-2017, принятым и действующим в Казахстане.":["Yes, all products are certified and comply with GOST standards. The quality of each batch is checked by our own laboratory. LMB is produced according to Eurocodes EN 206-2017, adopted and in force in Kazakhstan.","Иә, барлық өнім сертификатталған және МЕМСТ-қа сәйкес келеді. Әр партияның сапасын өз зертханамыз тексереді. ЛМБ Қазақстанда қабылданған және қолданыстағы EN 206-2017 Еурокодтары бойынша өндіріледі.","Evet, tüm ürünler sertifikalıdır ve GOST standartlarına uygundur. Her partinin kalitesi kendi laboratuvarımızca kontrol edilir. LMB, Kazakistan'da kabul edilmiş ve yürürlükte olan EN 206-2017 Eurokodlarına göre üretilir.","是的，所有产品均已认证并符合国家标准（GOST）。每批产品的质量都由自有实验室检测。LMB按照哈萨克斯坦已采用并生效的欧洲规范EN 206-2017生产。"],
+    "В какие населённые пункты возможна доставка?":["Which locations do you deliver to?","Қандай елді мекендерге жеткізу мүмкін?","Hangi bölgelere teslimat yapıyorsunuz?","可配送至哪些地区？"],
+    "Доставка осуществляется автобетоносмесителями по г. Алматы и до 50 км от города, от 3 000 тг/м3 в зависимости от расстояния. При доставке товарного бетона менее 10 м3 оплата производится за 10 м3.":["Delivery is carried out by concrete mixer trucks across Almaty and up to 50 km from the city, from 3,000 KZT/m³ depending on distance. For deliveries of less than 10 m³ of commercial concrete, payment is charged for 10 m³.","Жеткізу автобетонараластырғыштармен Алматы қаласы бойынша және қаладан 50 км-ге дейін, қашықтыққа байланысты 3 000 тг/м³-ден бастап жүзеге асырылады. Тауарлық бетонды 10 м³-ден аз жеткізген жағдайда төлем 10 м³ үшін алынады.","Teslimat, Almatı genelinde ve şehirden 50 km'ye kadar, mesafeye bağlı olarak 3.000 KZT/m³'ten başlayan fiyatlarla transmikserlerle yapılır. 10 m³'ten az hazır beton teslimatlarında ücret 10 m³ üzerinden alınır.","由混凝土搅拌车在阿拉木图市内及距市区50公里范围内配送，视距离而定每立方米3,000坚戈起。商品混凝土配送量不足10立方米时，按10立方米计费。"],
+    // --- partner / contacts / footer ---
+    "Оставьте контакты и наш менеджер свяжется с вами! Мы свяжемся с вами в течение дня и проконсультируем.":["Leave your contact details and our manager will get in touch with you! We will contact you within the day and provide a consultation.","Байланыс деректеріңізді қалдырыңыз, менеджеріміз сізбен хабарласады! Біз сізбен күн ішінде байланысып, кеңес береміз.","İletişim bilgilerinizi bırakın, yöneticimiz sizinle iletişime geçsin! Gün içinde sizi arayıp danışmanlık sağlayacağız.","请留下您的联系方式，我们的经理将与您联系！我们将在当天与您联系并提供咨询。"],
+    "Казахстан, г. Алматы, ул. Бокейханова, 11":["11 Bokeikhanov St., Almaty, Kazakhstan","Қазақстан, Алматы қ., Бөкейханов көшесі, 11","Kazakistan, Almatı, Bokeyhanov Cad. No. 11","哈萨克斯坦，阿拉木图市，博克伊哈诺夫街11号"],
+    "СЛЕДИТЕ ЗА НОВОСТЯМИ":["FOLLOW OUR NEWS","ЖАҢАЛЫҚТАРДЫ БАҚЫЛАҢЫЗ","HABERLERİ TAKİP EDİN","关注我们的动态"],
+    "Литой Модифицированный Бетон — завод-производитель бетона в г. Алматы":["Cast Modified Concrete — a concrete manufacturing plant in Almaty","Құйылмалы Модификацияланған Бетон — Алматы қаласындағы бетон өндіруші зауыт","Dökme Modifiye Beton — Almatı'da beton üretim fabrikası","浇筑改性混凝土——阿拉木图混凝土生产厂"],
+    "Преимущества":["Advantages","Артықшылықтар","Avantajlar","优势"],
+    "Каталог":["Catalog","Каталог","Katalog","产品目录"],
+    "ҒЫЛЫМ ҚОРЫ · ФОНД НАУКИ":["GYLYM KORY · SCIENCE FOUNDATION","ҒЫЛЫМ ҚОРЫ","ĞILIM QORI · BİLİM FONU","科学基金会"],
+    "«Настоящий проект осуществлен/осуществляется в рамках реализации грантового финансирования коммерциализации РННТД, финансируемого за счет денежных средств ГУ «Комитет науки Министерства науки и высшего образования Республики Казахстан».":["“This project has been/is being implemented under grant financing for the commercialization of the results of scientific and technical activities, funded by the State Institution ‘Science Committee of the Ministry of Science and Higher Education of the Republic of Kazakhstan’.”","«Бұл жоба «Қазақстан Республикасы Ғылым және жоғары білім министрлігі Ғылым комитеті» ММ қаражаты есебінен қаржыландырылатын ҒЗТКЖ нәтижелерін коммерцияландыруды гранттық қаржыландыру аясында жүзеге асырылды/асырылуда».","“Bu proje, Kazakistan Cumhuriyeti Bilim ve Yüksek Öğretim Bakanlığı Bilim Komitesi devlet kurumu tarafından finanse edilen, bilimsel-teknik faaliyet sonuçlarının ticarileştirilmesine yönelik hibe finansmanı çerçevesinde gerçekleştirilmiştir/gerçekleştirilmektedir.”","“本项目在科研技术活动成果商业化的资助框架内实施，资金由哈萨克斯坦共和国科学与高等教育部科学委员会国家机构提供。”"]
+  };
+
+  // two-tone headings: whole innerHTML is replaced so word order stays natural per language
+  const TH = {
+    hero:['<span class="accent">Commercial and LMB concrete</span> delivered from the manufacturer’s plant in Almaty from 20,900 KZT','<span class="accent">Тауарлық және ЛМБ бетоны</span> — Алматыдағы өндіруші зауыттан жеткізумен, 20 900 теңгеден','<span class="accent">Hazır beton ve LMB betonu</span> — üretici fabrikadan Almatı içinde teslimat, 20.900 KZT’den itibaren','<span class="accent">商品混凝土与LMB混凝土</span>，厂家直送阿拉木图，20,900坚戈起'],
+    about:['About <span class="accent">the company</span>','<span class="accent">Компания</span> туралы','<span class="accent">Şirket</span> hakkında','关于<span class="accent">我们</span>'],
+    director:['<span class="accent">A word</span> from the company director','Компания директорының <span class="accent">сөзі</span>','Şirket müdürünün <span class="accent">mesajı</span>','公司经理<span class="accent">致辞</span>'],
+    products:['Our <span class="accent">products</span>','Біздің <span class="accent">өнімдер</span>','<span class="accent">Ürünlerimiz</span>','我们的<span class="accent">产品</span>'],
+    lmbgroup:['Cast modified concrete / <span class="accent">LMB</span>','Құйылмалы модификацияланған бетон / <span class="accent">ЛМБ</span>','Dökme modifiye beton / <span class="accent">LMB</span>','浇筑改性混凝土 / <span class="accent">LMB</span>'],
+    commgroup:['Commercial concrete <span class="accent">M100 – M500</span>','Тауарлық бетон <span class="accent">М100 – М500</span>','Hazır beton <span class="accent">M100 – M500</span>','商品混凝土 <span class="accent">M100 – M500</span>'],
+    what:['What is <span class="accent">cast modified concrete</span>','<span class="accent">Құйылмалы модификацияланған бетон</span> дегеніміз не','<span class="accent">Dökme modifiye beton</span> nedir','什么是<span class="accent">浇筑改性混凝土</span>'],
+    adv:['Advantages of <span class="accent">LMB</span>','<span class="accent">ЛМБ</span> артықшылықтары','<span class="accent">LMB</span> avantajları','<span class="accent">LMB</span>的优势'],
+    world:['Global construction experience <span class="accent">using LMB</span>','<span class="accent">ЛМБ қолданылған</span> әлемдік құрылыс тәжірибесі','<span class="accent">LMB kullanılan</span> dünya inşaat deneyimi','<span class="accent">使用LMB</span>的世界建筑经验'],
+    faq:['<span class="accent">Answers</span> to frequently asked questions','Жиі қойылатын сұрақтарға <span class="accent">жауаптар</span>','Sık sorulan sorulara <span class="accent">yanıtlar</span>','常见问题<span class="accent">解答</span>'],
+    partners:['Our <span class="accent">partners</span>','Біздің <span class="accent">серіктестер</span>','<span class="accent">Ortaklarımız</span>','我们的<span class="accent">合作伙伴</span>'],
+    partner:['Want to become our partner<br>or buy a franchise?','Біздің серіктесіміз болғыңыз<br>немесе франшиза сатып алғыңыз келе ме?','Ortağımız olmak<br>veya franchise satın almak ister misiniz?','想成为我们的合作伙伴<br>或购买特许经营权吗？']
+  };
+
+  const TITLES = {
+    ru:'ЛМБ — Товарный и литой модифицированный бетон с доставкой в г. Алматы',
+    en:'LMB — Commercial and cast modified concrete with delivery in Almaty',
+    kk:'ЛМБ — Алматыда жеткізумен тауарлық және құйылмалы модификацияланған бетон',
+    tr:'LMB — Almatı’da teslimatlı hazır ve dökme modifiye beton',
+    zh:'LMB — 阿拉木图商品及浇筑改性混凝土配送'
+  };
+
+  const LANGS = ['ru','en','kk','tr','zh'];
+  let cur = 'ru';
+  window.tr = function(s){
+    if (cur === 'ru') return s;
+    const row = T[s];
+    return row ? row[LANGS.indexOf(cur)-1] : s;
+  };
+
+  // assign keys to two-tone headings (order matters where several match)
+  const htmlEls = [];
+  function reg(el, key){ if (el){ el.dataset.t = key; htmlEls.push({el, key, orig: el.innerHTML}); } }
+  reg(document.querySelector('.hero h1'), 'hero');
+  const aboutTitles = document.querySelectorAll('#about .section-title');
+  reg(aboutTitles[0], 'about'); reg(aboutTitles[1], 'director');
+  reg(document.querySelector('#products .section-title'), 'products');
+  const prodH3 = document.querySelectorAll('#products .prod-group h3');
+  reg(prodH3[0], 'lmbgroup'); reg(prodH3[1], 'commgroup');
+  const lmbH2 = document.querySelectorAll('#lmb .lmb-grid h2');
+  reg(lmbH2[0], 'what'); reg(lmbH2[1], 'adv');
+  reg(document.querySelector('#world .section-title'), 'world');
+  reg(document.querySelector('#partners .section-title'), 'partners');
+  reg(document.querySelector('#faq .section-title'), 'faq');
+  reg(document.querySelector('.partner h2'), 'partner');
+
+  // collect translatable text nodes (skipping the two-tone headings handled above)
+  const textNodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let n;
+  while ((n = walker.nextNode())) {
+    const p = n.parentElement;
+    if (!p || p.closest('script,style,[data-t]')) continue;
+    const key = n.textContent.replace(/ /g,' ').trim();
+    if (key && T[key]) textNodes.push({node:n, orig:n.textContent, key});
+  }
+
+  const placeholders = [
+    ['#orderForm input[name=volume]', 'Количество бетона (в тоннах)'],
+    ['#orderForm input[name=company]', 'Название компании'],
+    ['#orderForm input[name=name]', 'Ваше имя']
+  ];
+
+  function setLang(lang){
+    cur = lang;
+    const idx = LANGS.indexOf(lang) - 1;
+    textNodes.forEach(t => {
+      if (lang === 'ru') { t.node.textContent = t.orig; return; }
+      const m = t.orig.match(/^(\s*)[\s\S]*?(\s*)$/);
+      t.node.textContent = (m ? m[1] : '') + T[t.key][idx] + (m ? m[2] : '');
+    });
+    htmlEls.forEach(h => { h.el.innerHTML = (lang === 'ru') ? h.orig : TH[h.key][idx]; });
+    placeholders.forEach(([sel, key]) => {
+      const el = document.querySelector(sel);
+      if (el) el.placeholder = (lang === 'ru') ? key : T[key][idx];
+    });
+    // quote toggle label follows current open state
+    const more = document.querySelector('.quote-more');
+    const qt = document.getElementById('quoteToggle');
+    if (qt) qt.textContent = window.tr(more && more.style.display === 'block' ? 'Свернуть' : 'Читать полностью');
+    // re-measure open FAQ answers
+    document.querySelectorAll('.faq-item.open .faq-a').forEach(a => { a.style.maxHeight = a.scrollHeight + 'px'; });
+    document.documentElement.lang = lang;
+    document.title = TITLES[lang];
+    try { localStorage.setItem('lmb-lang', lang); } catch(e) {}
+  }
+
+  const sel = document.getElementById('langSel');
+  sel.addEventListener('change', () => setLang(sel.value));
+  let saved = null;
+  try { saved = localStorage.getItem('lmb-lang'); } catch(e) {}
+  if (saved && saved !== 'ru' && LANGS.includes(saved)) { sel.value = saved; setLang(saved); }
+})();
+</script>
+</body>
+</html>
