@@ -290,6 +290,9 @@
     padding:24px;text-align:center;color:var(--muted);font-size:14.5px;
   }
   .map-fallback svg{opacity:.5}
+  .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn-route{background:var(--gray);color:var(--blue);display:inline-flex;align-items:center;gap:8px}
+  .btn-route:hover{background:#e9eaee}
 
   /* ---------- footer ---------- */
   footer{margin:16px 12px 12px}
@@ -757,15 +760,18 @@
             <a href="https://www.instagram.com/lmb.beton_almaty" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.3" fill="#fff"/></svg></a>
           </div>
         </div>
-        <a class="btn btn-orange" href="#order" style="justify-self:start">Заказать обратный звонок</a>
+        <div class="contact-actions">
+          <a class="btn btn-orange" href="#order">Заказать обратный звонок</a>
+          <a class="btn btn-route" href="https://yandex.ru/maps/org/lmb/32007314577/?mode=routes&rtext=~43.272593%2C76.911042&rtt=auto" target="_blank" rel="noopener">Проложить маршрут</a>
+        </div>
       </div>
       <div class="map">
         <div class="map-fallback">
           <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11z" stroke="#0E34BD" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="#0E34BD" stroke-width="2"/></svg>
           <span>Казахстан, г. Алматы, ул. Бокейханова, 11</span>
-          <a class="btn btn-blue" href="https://yandex.ru/maps/?ll=76.911044%2C43.272531&z=17&pt=76.911044,43.272531,pm2rdm" target="_blank" rel="noopener">Открыть на Яндекс.Картах</a>
+          <a class="btn btn-blue" href="https://yandex.ru/maps/org/lmb/32007314577/" target="_blank" rel="noopener">Открыть на Яндекс.Картах</a>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=76.911044%2C43.272531&z=17&pt=76.911044,43.272531,pm2rdm" title="Завод ЛМБ на карте — Алматы, ул. Бокейханова, 11" loading="lazy"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/org/lmb/32007314577/?ll=76.911042%2C43.272593&z=17" title="Завод ЛМБ на карте — Алматы, ул. Бокейханова, 11" loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -873,6 +879,7 @@
     "Контакты":["Contacts","Байланыс","İletişim","联系方式"],
     "Заказать звонок":["Request a call","Кері қоңырау","Sizi arayalım","预约回电"],
     "Заказать обратный звонок":["Request a callback","Кері қоңырауға тапсырыс беру","Geri arama talep et","预约回电"],
+    "Проложить маршрут":["Get directions","Бағыт салу","Yol tarifi al","导航路线"],
     "Заказать бетон":["Order concrete","Бетонға тапсырыс беру","Beton sipariş et","订购混凝土"],
     "Связаться с нами":["Contact us","Бізбен байланысу","Bize ulaşın","联系我们"],
     // --- hero ---
