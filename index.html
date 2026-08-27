@@ -222,23 +222,6 @@
   .tech-table td:nth-child(2) b{color:#FFB199}
   .tech-table small{display:block;color:rgba(255,255,255,.65);margin-top:4px;font-size:12.5px}
 
-  /* ---------- world ---------- */
-  .world-lead{max-width:760px;margin:0 auto 40px;text-align:center;color:var(--muted);font-size:15.5px}
-  .world-lead p{margin-bottom:12px}
-  .world-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .world-card{position:relative;border-radius:var(--radius);overflow:hidden}
-  .world-card img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease;backface-visibility:hidden}
-  .world-card:hover img{transform:scale(1.03)}
-  .world-card.tall{grid-row:span 2}
-  .world-card.tall img{height:100%}
-  .world-card:not(.tall) img{height:230px}
-  .world-card .caption{
-    position:absolute;left:0;right:0;bottom:0;
-    padding:44px 24px 18px;
-    color:#fff;font-weight:800;font-size:19px;line-height:1.25;
-    background:linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0));
-  }
-
   /* ---------- CTA form ---------- */
   .cta-section{
     max-width:1200px;margin-left:auto;margin-right:auto;
@@ -433,9 +416,6 @@
     .footer-note{margin:0 -24px;padding:18px 24px}
     .stats{grid-template-columns:1fr}
     .prod-cards{grid-template-columns:1fr}
-    .world-grid{grid-template-columns:1fr}
-    .world-card.tall{grid-row:auto}
-    .world-card.tall img{height:260px}
     .footer-top{grid-template-columns:1fr}
     .lmb-stats{grid-template-columns:1fr}
   }
@@ -658,22 +638,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WORLD EXPERIENCE ================= -->
-<section id="world">
-  <div class="card-section">
-    <h2 class="section-title">Мировой опыт строительства <span class="accent">с использованием ЛМБ</span></h2>
-    <div class="world-lead">
-      <p>Мировая практика показывает, что разработка литого модифицированного бетона является необходимостью для обеспечения возрастающих потребностей строительной индустрии.</p>
-      <p>Появление новых амбициозных проектов в сфере строительства (таких, как протяженные подвесные мосты в Японии и Китае, комплексы крупных гидротехнических и транспортных сооружений в Голландии и ряд других) повысило требования к особо высокопрочным бетонам.</p>
-    </div>
-    <div class="world-grid">
-      <div class="world-card tall"><img src="assets/burj.jpg" alt="Бурдж-Халифа, Дубай, ОАЭ"><div class="caption">Бурдж-Халифа, Дубай, ОАЭ</div></div>
-      <div class="world-card"><img src="assets/japan-bridge.jpg" alt="Кабельный мост, Япония"><div class="caption">Кабельный мост, Япония</div></div>
-      <div class="world-card"><img src="assets/atyrau-bridge.jpg" alt="Атырауский мост, Астана, РК"><div class="caption">Атырауский мост, Астана, РК</div></div>
     </div>
   </div>
 </section>
@@ -988,12 +952,6 @@
     "9–12 секунд":["9–12 seconds","9–12 секунд","9–12 saniye","9–12秒"],
     "≥0,9":["≥0.9","≥0,9","≥0,9","≥0.9"],
     "Товарный бетон не имеет таких показателей как время истечения и проходимость через препятствия в конструкции.":["Commercial concrete has no such indicators as flow time and the ability to pass through obstacles in the structure.","Тауарлық бетонда ағу уақыты және конструкциядағы кедергілерден өту қабілеті сияқты көрсеткіштер жоқ.","Hazır betonda akış süresi ve yapıdaki engellerden geçebilme gibi göstergeler bulunmaz.","商品混凝土没有流出时间和通过结构障碍能力等指标。"],
-    // --- world ---
-    "Мировая практика показывает, что разработка литого модифицированного бетона является необходимостью для обеспечения возрастающих потребностей строительной индустрии.":["Global practice shows that the development of cast modified concrete is a necessity to meet the growing needs of the construction industry.","Әлемдік тәжірибе көрсеткендей, құйылмалы модификацияланған бетонды әзірлеу құрылыс индустриясының өсіп келе жатқан қажеттіліктерін қамтамасыз ету үшін қажет.","Dünya pratiği, dökme modifiye betonun geliştirilmesinin inşaat sektörünün artan ihtiyaçlarını karşılamak için bir zorunluluk olduğunu göstermektedir.","世界实践表明，研发浇筑改性混凝土是满足建筑行业日益增长需求的必然选择。"],
-    "Появление новых амбициозных проектов в сфере строительства (таких, как протяженные подвесные мосты в Японии и Китае, комплексы крупных гидротехнических и транспортных сооружений в Голландии и ряд других) повысило требования к особо высокопрочным бетонам.":["The emergence of new ambitious construction projects (such as long suspension bridges in Japan and China, complexes of large hydraulic and transport structures in the Netherlands, and others) has raised the requirements for ultra-high-strength concrete.","Құрылыс саласындағы жаңа өршіл жобалардың пайда болуы (Жапония мен Қытайдағы ұзын аспалы көпірлер, Голландиядағы ірі гидротехникалық және көлік құрылыстарының кешендері және т.б.) аса жоғары беріктікті бетондарға қойылатын талаптарды арттырды.","İnşaat alanında yeni iddialı projelerin ortaya çıkması (Japonya ve Çin'deki uzun asma köprüler, Hollanda'daki büyük hidrolik ve ulaşım yapıları kompleksleri ve diğerleri) çok yüksek dayanımlı betonlara yönelik gereksinimleri artırmıştır.","建筑领域新的宏伟项目的出现（如日本和中国的长跨悬索桥、荷兰的大型水利和交通设施综合体等）提高了对超高强混凝土的要求。"],
-    "Бурдж-Халифа, Дубай, ОАЭ":["Burj Khalifa, Dubai, UAE","Бурдж-Халифа, Дубай, БАӘ","Burc Halife, Dubai, BAE","哈利法塔，迪拜，阿联酋"],
-    "Кабельный мост, Япония":["Cable bridge, Japan","Арқанды көпір, Жапония","Askı köprü, Japonya","斜拉桥，日本"],
-    "Атырауский мост, Астана, РК":["Atyrau Bridge, Astana, Kazakhstan","Атырау көпірі, Астана, ҚР","Atyrau Köprüsü, Astana, Kazakistan","阿特劳大桥，阿斯塔纳，哈萨克斯坦"],
     // --- order form ---
     "Оставьте заявку и получите расчет стоимости бетона":["Leave a request and get a concrete cost estimate","Өтінім қалдырып, бетон құнының есебін алыңыз","Talep bırakın, beton maliyet hesabınızı alın","提交申请，获取混凝土费用测算"],
     "Мы свяжемся с вами в течение дня и проконсультируем.":["We will contact you within the day and provide a consultation.","Біз сізбен күн ішінде байланысып, кеңес береміз.","Gün içinde sizinle iletişime geçip danışmanlık sağlayacağız.","我们将在当天与您联系并提供咨询。"],
@@ -1034,7 +992,6 @@
     commgroup:['Commercial concrete <span class="accent">M100 – M500</span>','Тауарлық бетон <span class="accent">М100 – М500</span>','Hazır beton <span class="accent">M100 – M500</span>','商品混凝土 <span class="accent">M100 – M500</span>'],
     what:['What is <span class="accent">cast modified concrete</span>','<span class="accent">Құйылмалы модификацияланған бетон</span> дегеніміз не','<span class="accent">Dökme modifiye beton</span> nedir','什么是<span class="accent">浇筑改性混凝土</span>'],
     adv:['Advantages of <span class="accent">LMB</span>','<span class="accent">ЛМБ</span> артықшылықтары','<span class="accent">LMB</span> avantajları','<span class="accent">LMB</span>的优势'],
-    world:['Global construction experience <span class="accent">using LMB</span>','<span class="accent">ЛМБ қолданылған</span> әлемдік құрылыс тәжірибесі','<span class="accent">LMB kullanılan</span> dünya inşaat deneyimi','<span class="accent">使用LMB</span>的世界建筑经验'],
     faq:['<span class="accent">Answers</span> to frequently asked questions','Жиі қойылатын сұрақтарға <span class="accent">жауаптар</span>','Sık sorulan sorulara <span class="accent">yanıtlar</span>','常见问题<span class="accent">解答</span>'],
     partners:['Our <span class="accent">partners</span>','Біздің <span class="accent">серіктестер</span>','<span class="accent">Ortaklarımız</span>','我们的<span class="accent">合作伙伴</span>'],
     partner:['Want to become our partner<br>or buy a franchise?','Біздің серіктесіміз болғыңыз<br>немесе франшиза сатып алғыңыз келе ме?','Ortağımız olmak<br>veya franchise satın almak ister misiniz?','想成为我们的合作伙伴<br>或购买特许经营权吗？']
@@ -1067,7 +1024,6 @@
   reg(prodH3[0], 'lmbgroup'); reg(prodH3[1], 'commgroup');
   const lmbH2 = document.querySelectorAll('#lmb .lmb-grid h2');
   reg(lmbH2[0], 'what'); reg(lmbH2[1], 'adv');
-  reg(document.querySelector('#world .section-title'), 'world');
   reg(document.querySelector('#partners .section-title'), 'partners');
   reg(document.querySelector('#faq .section-title'), 'faq');
   reg(document.querySelector('.partner h2'), 'partner');
