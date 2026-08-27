@@ -161,23 +161,13 @@
   .stat b{display:block;font-size:34px;font-weight:800;color:var(--blue);margin-bottom:4px}
   .stat span{color:var(--muted);font-size:14.5px}
 
-  .director{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:start}
-  .director-figure{margin:0}
+  .director{display:block}
+  .director-figure{margin:0;max-width:340px}
   .director-photo-frame{border-radius:var(--radius);overflow:hidden}
   .director-photo{width:100%;display:block;object-fit:cover}
   .director-caption{margin-top:14px;text-align:center}
   .director-caption b{display:block;font-size:17px;font-weight:800}
   .director-caption span{color:var(--muted);font-size:14px}
-  .director-card{background:var(--gray);border-radius:var(--radius);padding:34px 36px}
-  .director-card h3{font-size:26px;font-weight:800;line-height:1.2;margin-bottom:14px}
-  .director-card .quote{color:#3c4046;font-size:14.5px}
-  .director-card .quote p{margin-bottom:12px}
-  .quote-more{display:none}
-  .quote-toggle{
-    background:none;border:none;cursor:pointer;font-family:inherit;
-    color:var(--blue);font-weight:700;font-size:14.5px;padding:0;
-  }
-  .quote-toggle:hover{text-decoration:underline}
 
   /* ---------- products ---------- */
   .prod-group{margin-bottom:44px}
@@ -400,7 +390,7 @@
   /* ---------- adaptive ---------- */
   @media (max-width:1000px){
     .hero{grid-template-columns:1fr}
-    .director{grid-template-columns:1fr}
+
     .prod-cards{grid-template-columns:repeat(2,1fr)}
     .cta-section{grid-template-columns:1fr}
     .cta-img-frame{min-height:240px}
@@ -420,7 +410,7 @@
     .burger{display:block}
   }
   @media (max-width:1000px){
-    .director-figure{max-width:380px;margin:0 auto}
+    .director-figure{max-width:340px}
   }
   @media (max-width:760px){
     .phone-desktop{display:none}
@@ -526,21 +516,6 @@
           <span>профессор, доктор строительных наук</span>
         </figcaption>
       </figure>
-      <div class="director-card">
-        <h3>Ахметов Д.А. — директор компании ЛМБ</h3>
-        <div class="quote">
-          <p>«Республика Казахстан ставит перед собой грандиозные задачи, воплощение многих из которых возможно именно в строительной отрасли. Строительная отрасль в Республике Казахстан является одним из ведущих сегментов экономики страны. Но при реализации новых инфраструктурных объектов появляются и новые требования к строительным материалам, которые должны иметь повышенные прочностные и эксплуатационные характеристики. Это касается гидротехнических, транспортных сооружений, подвесных мостов, высотных зданий, частного жилого строительства и других объектов гражданского и промышленного строительства.</p>
-          <div class="quote-more">
-            <p>Надо отметить, что новые условия рынка диктуют необходимость снижения финансирования на строительные нужды, при этом основными условиями являются сокращение сроков строительства без потери качественных характеристик. Также одним из важных показателей при возведении зданий и сооружений является снижение уровня шума и вибраций, возникающих во время строительных работ, возможность бетонирования конструкций сложной пространственной геометрии, в том числе густоармированных, что особенно актуально в густонаселенных и сейсмоопасных регионах страны.</p>
-            <p>Данные задачи можно решить путем применения в строительстве литых модифицированных бетонов (ЛМБ) с самоуплотняющимися свойствами, которые находят все более широкое применение в мире, за счет положительного экономического эффекта, о чем свидетельствуют как зарубежный, так и отечественный опыт. Самоуплотняющийся бетон в настоящее время широко используется в промышленном и гражданском строительстве с целью сокращения сроков возведения крупномасштабных сооружений.</p>
-            <p>В начале 2000-х годов по всей Европе стали появляться первые предпосылки для допуска и распространения самоуплотняющегося и литого бетона.</p>
-            <p>Самоуплотняющийся бетон был впервые разработан в 1988 году для получения прочных бетонных конструкций сложной геометрической формы. С тех пор были проведены различные научные исследования, и этот вид бетона стал применяться в практических сооружениях в Японии, в основном крупными строительными компаниями. С целью превращения самоуплотняющегося бетона из специального в стандартный бетон учеными были проведены серьезные исследования по разработке рационального метода составления смеси и методов испытаний на самоуплотняемость.</p>
-            <p>В 2017 году на базе Научно-исследовательского института строительных материалов начались работы над проектом литых модифицированных бетонов, и команда исследователей работала над этим проектом сначала в лабораторных условиях, а далее уже апробировала и доказала работоспособность идеи и на производственной площадке. Основной задачей было проектирование состава бетонной смеси на местных сырьевых компонентах с использованием добавок на основе поликарбоксилатных эфиров местного казахстанского производства и тонкодисперсных наполнителей — отходов техногенных производств.</p>
-            <p>Сегодня мы с радостью представляем Вам — строительство инновационного завода по производству отечественного литого модифицированного бетона. Этот проект реализуется совместно с Фондом науки, который на конкурсной основе оценил перспективы внедрения ЛМБ в строительной сфере Казахстана и предоставил грант на его строительство. И теперь завод сможет обеспечить потребности отечественной строительной отрасли в инновационном литом модифицированном бетоне. Необходимо отметить, что проекты Фонда Науки способствуют росту научного потенциала страны и помогают воплотить научные изыскания в жизнь. Также стоит отметить, что литой модифицированный бетон — отечественный продукт, который попутно решает вопросы экологии путем применения отходов ферросплавных производств, снижения шумовой и вибрационной нагрузки, сокращение сроков строительства. Все это должно быть применено в строительной индустрии и выражает нашу заботу о процветании казахстанского общества».</p>
-          </div>
-          <button class="quote-toggle" id="quoteToggle">Читать полностью</button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -889,15 +864,6 @@
   burger.addEventListener('click', () => nav.classList.toggle('open'));
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
-  // director quote expand
-  const quoteToggle = document.getElementById('quoteToggle');
-  quoteToggle.addEventListener('click', () => {
-    const more = document.querySelector('.quote-more');
-    const open = more.style.display === 'block';
-    more.style.display = open ? 'none' : 'block';
-    quoteToggle.textContent = open ? window.tr('Читать полностью') : window.tr('Свернуть');
-  });
-
   // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');
@@ -1136,10 +1102,6 @@
       const el = document.querySelector(sel);
       if (el) el.placeholder = (lang === 'ru') ? key : T[key][idx];
     });
-    // quote toggle label follows current open state
-    const more = document.querySelector('.quote-more');
-    const qt = document.getElementById('quoteToggle');
-    if (qt) qt.textContent = window.tr(more && more.style.display === 'block' ? 'Свернуть' : 'Читать полностью');
     // re-measure open FAQ answers
     document.querySelectorAll('.faq-item.open .faq-a').forEach(a => { a.style.maxHeight = a.scrollHeight + 'px'; });
     document.documentElement.lang = lang;
