@@ -197,6 +197,11 @@
   .stat b{display:block;font-size:34px;font-weight:800;color:var(--blue);margin-bottom:4px}
   .stat span{color:var(--muted);font-size:14.5px}
 
+  .directions-title{font-size:clamp(19px,2.4vw,25px);font-weight:800;text-align:center;margin:0 0 22px}
+  .directions{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-bottom:60px}
+  .direction{background:var(--gray);border-radius:var(--radius);padding:24px 26px;display:flex;gap:16px;align-items:flex-start;font-weight:700;font-size:15.5px;line-height:1.35}
+  .dir-num{flex:none;width:38px;height:38px;border-radius:11px;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800}
+
   .director{display:block}
   .director-figure{margin:0 auto;max-width:340px}
   .director-photo-frame{border-radius:var(--radius);overflow:hidden}
@@ -519,11 +524,19 @@
 <section id="about">
   <div class="card-section">
     <h2 class="section-title">О <span class="accent">компании</span></h2>
-    <p class="about-lead">ЛМБ 2022 — высокотехнологичная компания, которая была создана 30 ноября 2022 г. Наша компания ориентирована на производство продукции с высокой добавленной стоимостью, которая отличается своей уникальностью и инновационностью. Качество продукции, быстрая доставка по г. Алматы.</p>
+    <p class="about-lead">ЛМБ 2022 — высокотехнологичная компания, созданная 30 ноября 2022 года. Мы ориентированы на инновационные научные изыскания, исследования и разработки в области бетонных смесей, а также на создание оборудования и технологий производства современных материалов на их основе. Качество продукции подтверждено собственной лабораторией, доставка — по всему г. Алматы.</p>
     <div class="stats">
       <div class="stat"><b>2022</b><span>год основания компании</span></div>
       <div class="stat"><b>М100–М500</b><span>марки товарного бетона</span></div>
       <div class="stat"><b>0 аналогов</b><span>ЛМБ не имеет аналогов в Казахстане</span></div>
+    </div>
+
+    <h3 class="directions-title">Направления научных разработок и производства</h3>
+    <div class="directions">
+      <div class="direction"><span class="dir-num">01</span>Самоуплотняющиеся бетоны</div>
+      <div class="direction"><span class="dir-num">02</span>Литой модифицированный бетон (ЛМБ) для литья в туннельные опалубки</div>
+      <div class="direction"><span class="dir-num">03</span>Товарный бетон общестроительного назначения</div>
+      <div class="direction"><span class="dir-num">04</span>Тяжёлые бетоны специального назначения</div>
     </div>
 
     <h2 class="section-title" style="font-size:clamp(24px,3vw,34px)"><span class="accent">Директор</span> компании</h2>
@@ -922,7 +935,13 @@
     "от 20 900 тг за 1 м³ · Жетысуйский р-н, г. Алматы":["From 20,900 KZT per 1 m³ · Zhetysu district, Almaty","1 м³ үшін 20 900 теңгеден · Жетісу ауданы, Алматы қ.","1 m³ için 20.900 KZT'den · Jetisu ilçesi, Almatı","每立方米20,900坚戈起 · 阿拉木图市杰特苏区"],
     "Товарный бетон от М100 до М500. Литой модифицированный бетон не имеет аналогов в Казахстане. Проверка качества своей лабораторией. Завод находится в черте г. Алматы.":["Commercial concrete from M100 to M500. Cast modified concrete has no analogues in Kazakhstan. Quality is checked by our own laboratory. The plant is located within Almaty city limits.","М100-ден М500-ге дейінгі тауарлық бетон. Құйылмалы модификацияланған бетонның Қазақстанда баламасы жоқ. Сапаны өз зертханамыз тексереді. Зауыт Алматы қаласының ішінде орналасқан.","M100'den M500'e kadar hazır beton. Dökme modifiye betonun Kazakistan'da benzeri yoktur. Kalite kendi laboratuvarımız tarafından kontrol edilir. Fabrika Almatı şehir sınırları içindedir.","M100至M500商品混凝土。浇筑改性混凝土在哈萨克斯坦独一无二。质量由自有实验室检测。工厂位于阿拉木图市区内。"],
     // --- about ---
-    "ЛМБ 2022 — высокотехнологичная компания, которая была создана 30 ноября 2022 г. Наша компания ориентирована на производство продукции с высокой добавленной стоимостью, которая отличается своей уникальностью и инновационностью. Качество продукции, быстрая доставка по г. Алматы.":["LMB 2022 is a high-tech company founded on November 30, 2022. Our company focuses on manufacturing high value-added products distinguished by their uniqueness and innovation. Product quality and fast delivery across Almaty.","ЛМБ 2022 — 2022 жылғы 30 қарашада құрылған жоғары технологиялық компания. Біздің компания бірегейлігімен және инновациялылығымен ерекшеленетін жоғары қосылған құны бар өнім өндіруге бағытталған. Өнім сапасы, Алматы қаласы бойынша жылдам жеткізу.","LMB 2022, 30 Kasım 2022'de kurulan yüksek teknolojili bir şirkettir. Şirketimiz, benzersizliği ve yenilikçiliğiyle öne çıkan yüksek katma değerli ürünler üretmeye odaklanmıştır. Ürün kalitesi ve Almatı genelinde hızlı teslimat.","LMB 2022是一家成立于2022年11月30日的高科技公司。我们公司专注于生产具有独特性和创新性的高附加值产品。产品质量可靠，阿拉木图市内快速配送。"],
+    "ЛМБ 2022 — высокотехнологичная компания, созданная 30 ноября 2022 года. Мы ориентированы на инновационные научные изыскания, исследования и разработки в области бетонных смесей, а также на создание оборудования и технологий производства современных материалов на их основе. Качество продукции подтверждено собственной лабораторией, доставка — по всему г. Алматы.":["LMB 2022 is a high-tech company founded on 30 November 2022. We focus on innovative scientific research and development in the field of concrete mixes, as well as on creating equipment and technologies for producing modern materials based on them. Product quality is verified by our own laboratory, with delivery across Almaty.","ЛМБ 2022 — 2022 жылғы 30 қарашада құрылған жоғары технологиялық компания. Біз бетон қоспалары саласындағы инновациялық ғылыми ізденістерге, зерттеулер мен әзірлемелерге, сондай-ақ солардың негізінде заманауи материалдар өндіру жабдықтары мен технологияларын жасауға бағытталғанбыз. Өнім сапасын өз зертханамыз растайды, жеткізу — Алматы қаласы бойынша.","LMB 2022, 30 Kasım 2022 tarihinde kurulan yüksek teknolojili bir şirkettir. Beton karışımları alanında yenilikçi bilimsel araştırma ve geliştirmelere, ayrıca bunlara dayalı modern malzemelerin üretimi için ekipman ve teknolojiler geliştirmeye odaklanıyoruz. Ürün kalitesi kendi laboratuvarımızca doğrulanır, teslimat Almatı genelinde yapılır.","LMB 2022是一家成立于2022年11月30日的高科技公司。我们专注于混凝土配合料领域的创新科学研究与开发，以及研制以其为基础的现代材料生产设备与工艺。产品质量由自有实验室检测，配送覆盖阿拉木图全市。"],
+    "Направления научных разработок и производства":["Areas of research and production","Ғылыми әзірлемелер мен өндіріс бағыттары","Bilimsel geliştirme ve üretim alanları","科研开发与生产方向"],
+    "Самоуплотняющиеся бетоны":["Self-compacting concrete","Өзін-өзі тығыздайтын бетондар","Kendiliğinden yerleşen betonlar","自密实混凝土"],
+    "Литой модифицированный бетон (ЛМБ) для литья в туннельные опалубки":["Cast modified concrete (LMB) for tunnel formwork casting","Туннельдік қалыптарға құюға арналған құйылмалы модификацияланған бетон (ЛМБ)","Tünel kalıplara döküm için dökme modifiye beton (LMB)","用于隧道模板浇筑的浇筑改性混凝土（LMB）"],
+    "Товарный бетон общестроительного назначения":["Commercial concrete for general construction","Жалпы құрылыс мақсатындағы тауарлық бетон","Genel inşaat amaçlı hazır beton","通用建筑商品混凝土"],
+    "Тяжёлые бетоны специального назначения":["Heavy concrete for special applications","Арнайы мақсаттағы ауыр бетондар","Özel amaçlı ağır betonlar","特种用途重混凝土"],
+
     "год основания компании":["year the company was founded","компанияның құрылған жылы","şirketin kuruluş yılı","公司成立年份"],
     "марки товарного бетона":["commercial concrete grades","тауарлық бетон маркалары","hazır beton sınıfları","商品混凝土标号"],
     "0 аналогов":["No analogues","Баламасы жоқ","Benzersiz","独一无二"],
